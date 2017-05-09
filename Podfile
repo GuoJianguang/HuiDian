@@ -1,4 +1,6 @@
 target 'HuiDian' do
+pod 'AMapLocation'
+pod 'AMapSearch'
 pod 'ZXingObjC', '~> 3.1.0'
 pod 'SDWebImage', '~> 3.8.2'
 pod "Qiniu", "~> 7.1.1"
