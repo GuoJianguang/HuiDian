@@ -19,7 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviBar.hiddenBackBtn = YES;
+    self.naviBar.title = @"个人中心";
     self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.detailImage = [UIImage imageNamed:@"icon_scan"];
     self.naviBar.delegate = self;
     self.bgImageView.hidden = YES;
     self.withDrawBtn.layer.cornerRadius = 15;
@@ -33,7 +36,23 @@
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(logout:) name:LogOutNSNotification object:nil];
 
+
+}
+
+
+#pragma mark - 退出登录的操作
+- (void)logout:(NSNotification *)notification
+{
+    self.tabBarController.selectedIndex = 0;
+}
+
+#pragma mark - 扫一扫
+- (void)detailBtnClick
+{
+    
 }
 
 #pragma mark - UITableView
@@ -71,6 +90,5 @@
 }
 */
 
-- (IBAction)withDrawBtn:(UIButton *)sender {
-}
+
 @end

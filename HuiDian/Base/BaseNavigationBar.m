@@ -43,7 +43,7 @@
     [self.back_title addGestureRecognizer:ges];
     self.title_label.textColor = MacoTitleColor;
     self.back_title.textColor = [UIColor blackColor];
-    [self.detail_btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.detail_btn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     self.backgroundColor = MacoYellowColor;
 }
 

@@ -9,6 +9,27 @@
 /* Begin PBXBuildFile section */
 		041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD51EBC16F90084D2D4 /* Base.xcassets */; };
 		041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD71EBC17720084D2D4 /* Login.xcassets */; };
+		042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */; };
+		042C6FBC1EC4053A0035A912 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 042C6FB81EC405390035A912 /* ZZCircleProgress.bundle */; };
+		042C6FBD1EC4053A0035A912 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FBA1EC405390035A912 /* ZZCircleProgress.m */; };
+		042C6FC21EC438DA0035A912 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FC01EC438DA0035A912 /* SetViewController.m */; };
+		042C6FC31EC438DA0035A912 /* SetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C6FC11EC438DA0035A912 /* SetViewController.xib */; };
+		042C6FC81EC444F40035A912 /* RealNameSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FC61EC444F30035A912 /* RealNameSetViewController.m */; };
+		042C6FC91EC444F40035A912 /* RealNameSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C6FC71EC444F30035A912 /* RealNameSetViewController.xib */; };
+		042C70341EC452340035A912 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 042C70161EC452340035A912 /* CodeScan.bundle */; };
+		042C70351EC452340035A912 /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C701A1EC452340035A912 /* UIActionSheet+LBXAlertAction.m */; };
+		042C70361EC452340035A912 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C701C1EC452340035A912 /* UIAlertView+LBXAlertAction.m */; };
+		042C70371EC452340035A912 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C701E1EC452340035A912 /* LBXAlertAction.m */; };
+		042C70381EC452340035A912 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70201EC452340035A912 /* LBXScanLineAnimation.m */; };
+		042C70391EC452340035A912 /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70221EC452340035A912 /* LBXScanNative.m */; };
+		042C703A1EC452340035A912 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70241EC452340035A912 /* LBXScanNetAnimation.m */; };
+		042C703B1EC452340035A912 /* LBXScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70261EC452340035A912 /* LBXScanResult.m */; };
+		042C703C1EC452340035A912 /* LBXScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70281EC452340035A912 /* LBXScanView.m */; };
+		042C703D1EC452340035A912 /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C702A1EC452340035A912 /* LBXScanViewController.m */; };
+		042C703E1EC452340035A912 /* LBXScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C702C1EC452340035A912 /* LBXScanViewStyle.m */; };
+		042C703F1EC452340035A912 /* LBXScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C702E1EC452340035A912 /* LBXScanWrapper.m */; };
+		042C70401EC452340035A912 /* LBXZXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70301EC452340035A912 /* LBXZXCapture.m */; };
+		042C70411EC452340035A912 /* ZXingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C70331EC452340035A912 /* ZXingWrapper.m */; };
 		045B01051EB9C69F00107CC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B01041EB9C69F00107CC2 /* main.m */; };
 		045B01081EB9C69F00107CC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B01071EB9C69F00107CC2 /* AppDelegate.m */; };
 		045B010B1EB9C69F00107CC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B010A1EB9C69F00107CC2 /* ViewController.m */; };
@@ -69,6 +90,7 @@
 		04AD5C771EBB0B3500BD83D1 /* HDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5C6E1EBB0B3500BD83D1 /* HDUserInfo.m */; };
 		04AD5CD01EBB0BE800BD83D1 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5CCF1EBB0BE800BD83D1 /* Colours.m */; };
 		04AD5CD31EBB0CF000BD83D1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5CD21EBB0CF000BD83D1 /* LoginViewController.m */; };
+		04ED913A1EC2C0B9009384FF /* BillDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED91391EC2C0B9009384FF /* BillDataModel.m */; };
 		19CD85CA087D866FE6D97C86 /* libPods-HuiDian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC637FEF786F01FE4D2EC06 /* libPods-HuiDian.a */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +114,45 @@
 /* Begin PBXFileReference section */
 		041C7CD51EBC16F90084D2D4 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
 		041C7CD71EBC17720084D2D4 /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
+		042C6FB61EC405390035A912 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
+		042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+timerBlock.m"; sourceTree = "<group>"; };
+		042C6FB81EC405390035A912 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
+		042C6FB91EC405390035A912 /* ZZCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCircleProgress.h; sourceTree = "<group>"; };
+		042C6FBA1EC405390035A912 /* ZZCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCircleProgress.m; sourceTree = "<group>"; };
+		042C6FBF1EC438DA0035A912 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		042C6FC01EC438DA0035A912 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		042C6FC11EC438DA0035A912 /* SetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetViewController.xib; sourceTree = "<group>"; };
+		042C6FC51EC444F30035A912 /* RealNameSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealNameSetViewController.h; sourceTree = "<group>"; };
+		042C6FC61EC444F30035A912 /* RealNameSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealNameSetViewController.m; sourceTree = "<group>"; };
+		042C6FC71EC444F30035A912 /* RealNameSetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealNameSetViewController.xib; sourceTree = "<group>"; };
+		042C70161EC452340035A912 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		042C70191EC452340035A912 /* UIActionSheet+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LBXAlertAction.h"; sourceTree = "<group>"; };
+		042C701A1EC452340035A912 /* UIActionSheet+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LBXAlertAction.m"; sourceTree = "<group>"; };
+		042C701B1EC452340035A912 /* UIAlertView+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LBXAlertAction.h"; sourceTree = "<group>"; };
+		042C701C1EC452340035A912 /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
+		042C701D1EC452340035A912 /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
+		042C701E1EC452340035A912 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		042C701F1EC452340035A912 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
+		042C70201EC452340035A912 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
+		042C70211EC452340035A912 /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNative.h; sourceTree = "<group>"; };
+		042C70221EC452340035A912 /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNative.m; sourceTree = "<group>"; };
+		042C70231EC452340035A912 /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
+		042C70241EC452340035A912 /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
+		042C70251EC452340035A912 /* LBXScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanResult.h; sourceTree = "<group>"; };
+		042C70261EC452340035A912 /* LBXScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanResult.m; sourceTree = "<group>"; };
+		042C70271EC452340035A912 /* LBXScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanView.h; sourceTree = "<group>"; };
+		042C70281EC452340035A912 /* LBXScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanView.m; sourceTree = "<group>"; };
+		042C70291EC452340035A912 /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
+		042C702A1EC452340035A912 /* LBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewController.m; sourceTree = "<group>"; };
+		042C702B1EC452340035A912 /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
+		042C702C1EC452340035A912 /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewStyle.m; sourceTree = "<group>"; };
+		042C702D1EC452340035A912 /* LBXScanWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanWrapper.h; sourceTree = "<group>"; };
+		042C702E1EC452340035A912 /* LBXScanWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanWrapper.m; sourceTree = "<group>"; };
+		042C702F1EC452340035A912 /* LBXZXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCapture.h; sourceTree = "<group>"; };
+		042C70301EC452340035A912 /* LBXZXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXZXCapture.m; sourceTree = "<group>"; };
+		042C70311EC452340035A912 /* LBXZXCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCaptureDelegate.h; sourceTree = "<group>"; };
+		042C70321EC452340035A912 /* ZXingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWrapper.h; sourceTree = "<group>"; };
+		042C70331EC452340035A912 /* ZXingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
 		045B01001EB9C69F00107CC2 /* HuiDian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiDian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045B01041EB9C69F00107CC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		045B01061EB9C69F00107CC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -197,6 +258,8 @@
 		04AD5CCF1EBB0BE800BD83D1 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		04AD5CD11EBB0CF000BD83D1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		04AD5CD21EBB0CF000BD83D1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		04ED91381EC2C0B9009384FF /* BillDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillDataModel.h; sourceTree = "<group>"; };
+		04ED91391EC2C0B9009384FF /* BillDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillDataModel.m; sourceTree = "<group>"; };
 		140D099B88426C2C90854804 /* Pods-HuiDian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuiDian.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuiDian/Pods-HuiDian.release.xcconfig"; sourceTree = "<group>"; };
 		1FC637FEF786F01FE4D2EC06 /* libPods-HuiDian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HuiDian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B982DF5333576AC1319D02 /* Pods-HuiDian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuiDian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuiDian/Pods-HuiDian.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +291,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042C6FB51EC405390035A912 /* ZZCircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				042C6FB61EC405390035A912 /* NSTimer+timerBlock.h */,
+				042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */,
+				042C6FB81EC405390035A912 /* ZZCircleProgress.bundle */,
+				042C6FB91EC405390035A912 /* ZZCircleProgress.h */,
+				042C6FBA1EC405390035A912 /* ZZCircleProgress.m */,
+			);
+			path = ZZCircleProgress;
+			sourceTree = "<group>";
+		};
+		042C6FBE1EC438C70035A912 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				042C6FBF1EC438DA0035A912 /* SetViewController.h */,
+				042C6FC01EC438DA0035A912 /* SetViewController.m */,
+				042C6FC11EC438DA0035A912 /* SetViewController.xib */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		042C6FC41EC444E20035A912 /* RealNameSet */ = {
+			isa = PBXGroup;
+			children = (
+				042C6FC51EC444F30035A912 /* RealNameSetViewController.h */,
+				042C6FC61EC444F30035A912 /* RealNameSetViewController.m */,
+				042C6FC71EC444F30035A912 /* RealNameSetViewController.xib */,
+			);
+			path = RealNameSet;
+			sourceTree = "<group>";
+		};
+		042C70151EC452340035A912 /* LBXScan */ = {
+			isa = PBXGroup;
+			children = (
+				042C70161EC452340035A912 /* CodeScan.bundle */,
+				042C70171EC452340035A912 /* LBXAlertAction */,
+				042C701F1EC452340035A912 /* LBXScanLineAnimation.h */,
+				042C70201EC452340035A912 /* LBXScanLineAnimation.m */,
+				042C70211EC452340035A912 /* LBXScanNative.h */,
+				042C70221EC452340035A912 /* LBXScanNative.m */,
+				042C70231EC452340035A912 /* LBXScanNetAnimation.h */,
+				042C70241EC452340035A912 /* LBXScanNetAnimation.m */,
+				042C70251EC452340035A912 /* LBXScanResult.h */,
+				042C70261EC452340035A912 /* LBXScanResult.m */,
+				042C70271EC452340035A912 /* LBXScanView.h */,
+				042C70281EC452340035A912 /* LBXScanView.m */,
+				042C70291EC452340035A912 /* LBXScanViewController.h */,
+				042C702A1EC452340035A912 /* LBXScanViewController.m */,
+				042C702B1EC452340035A912 /* LBXScanViewStyle.h */,
+				042C702C1EC452340035A912 /* LBXScanViewStyle.m */,
+				042C702D1EC452340035A912 /* LBXScanWrapper.h */,
+				042C702E1EC452340035A912 /* LBXScanWrapper.m */,
+				042C702F1EC452340035A912 /* LBXZXCapture.h */,
+				042C70301EC452340035A912 /* LBXZXCapture.m */,
+				042C70311EC452340035A912 /* LBXZXCaptureDelegate.h */,
+				042C70321EC452340035A912 /* ZXingWrapper.h */,
+				042C70331EC452340035A912 /* ZXingWrapper.m */,
+			);
+			path = LBXScan;
+			sourceTree = "<group>";
+		};
+		042C70171EC452340035A912 /* LBXAlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				042C70181EC452340035A912 /* Class */,
+				042C701D1EC452340035A912 /* LBXAlertAction.h */,
+				042C701E1EC452340035A912 /* LBXAlertAction.m */,
+			);
+			path = LBXAlertAction;
+			sourceTree = "<group>";
+		};
+		042C70181EC452340035A912 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				042C70191EC452340035A912 /* UIActionSheet+LBXAlertAction.h */,
+				042C701A1EC452340035A912 /* UIActionSheet+LBXAlertAction.m */,
+				042C701B1EC452340035A912 /* UIAlertView+LBXAlertAction.h */,
+				042C701C1EC452340035A912 /* UIAlertView+LBXAlertAction.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		045B00F71EB9C69F00107CC2 = {
 			isa = PBXGroup;
 			children = (
@@ -303,12 +449,15 @@
 		04614A3F1EC1AD680056951B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				042C6FC41EC444E20035A912 /* RealNameSet */,
+				042C6FBE1EC438C70035A912 /* Set */,
 				04614A4F1EC1BDAC0056951B /* WalletDynamic  */,
 				04614A451EC1ADC10056951B /* MineViewController.h */,
 				04614A461EC1ADC10056951B /* MineViewController.m */,
 				04614A481EC1B4010056951B /* MineTableViewCell.h */,
 				04614A491EC1B4010056951B /* MineTableViewCell.m */,
 				04614A4A1EC1B4010056951B /* MineTableViewCell.xib */,
+				042C6FB51EC405390035A912 /* ZZCircleProgress */,
 				04614A4D1EC1B8080056951B /* Mine.xcassets */,
 			);
 			path = Mine;
@@ -335,6 +484,8 @@
 				04614A5F1EC1C6E50056951B /* WalletDynamicOtherTableViewCell.h */,
 				04614A601EC1C6E50056951B /* WalletDynamicOtherTableViewCell.m */,
 				04614A611EC1C6E50056951B /* WalletDynamicOtherTableViewCell.xib */,
+				04ED91381EC2C0B9009384FF /* BillDataModel.h */,
+				04ED91391EC2C0B9009384FF /* BillDataModel.m */,
 			);
 			path = "WalletDynamic ";
 			sourceTree = "<group>";
@@ -433,6 +584,7 @@
 		04AD5CC31EBB0B9D00BD83D1 /* ThirdAPI */ = {
 			isa = PBXGroup;
 			children = (
+				042C70151EC452340035A912 /* LBXScan */,
 				04AD5CCD1EBB0BE800BD83D1 /* Colours */,
 			);
 			path = ThirdAPI;
@@ -583,18 +735,22 @@
 				04AD5C471EBB0A1C00BD83D1 /* HomebannerDefault.jpg in Resources */,
 				04614A541EC1BE0F0056951B /* WalletDynamicViewController.xib in Resources */,
 				041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */,
+				042C6FBC1EC4053A0035A912 /* ZZCircleProgress.bundle in Resources */,
 				04614A4E1EC1B8080056951B /* Mine.xcassets in Resources */,
 				04AD5C521EBB0A1C00BD83D1 /* Public.xcassets in Resources */,
 				04AD5C4F1EBB0A1C00BD83D1 /* merchantHeader.jpg in Resources */,
 				04AD5C511EBB0A1C00BD83D1 /* NothingView.xib in Resources */,
 				041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */,
+				042C6FC31EC438DA0035A912 /* SetViewController.xib in Resources */,
 				04614A5E1EC1C58B0056951B /* WalletDynammicTableViewCell.xib in Resources */,
 				04614A3E1EC1A2B60056951B /* RegisterViewController.xib in Resources */,
 				045B010E1EB9C69F00107CC2 /* Main.storyboard in Resources */,
 				04AD5C481EBB0A1C00BD83D1 /* 213955937960616.cer in Resources */,
 				04614A681EC1C8720056951B /* WalletView2.xib in Resources */,
+				042C6FC91EC444F40035A912 /* RealNameSetViewController.xib in Resources */,
 				04614A591EC1C49F0056951B /* WalletView1.xib in Resources */,
 				04614A631EC1C6E50056951B /* WalletDynamicOtherTableViewCell.xib in Resources */,
+				042C70341EC452340035A912 /* CodeScan.bundle in Resources */,
 				04AD5C4B1EBB0A1C00BD83D1 /* HttpClient_Readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,18 +824,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042C703E1EC452340035A912 /* LBXScanViewStyle.m in Sources */,
 				04AD5C761EBB0B3500BD83D1 /* LocationManager.m in Sources */,
 				04AD5C561EBB0A1C00BD83D1 /* UIImage+ColorImage.m in Sources */,
+				042C70381EC452340035A912 /* LBXScanLineAnimation.m in Sources */,
 				04AD5C6F1EBB0B3500BD83D1 /* BaseCollectionViewCell.m in Sources */,
 				04AD5C4C1EBB0A1C00BD83D1 /* HttpClientAlertViewHelper.m in Sources */,
 				045B010B1EB9C69F00107CC2 /* ViewController.m in Sources */,
 				04614A531EC1BE0F0056951B /* WalletDynamicViewController.m in Sources */,
 				04AD5CD31EBB0CF000BD83D1 /* LoginViewController.m in Sources */,
+				042C6FC21EC438DA0035A912 /* SetViewController.m in Sources */,
 				04AD5C591EBB0A1C00BD83D1 /* Verify.m in Sources */,
 				04AD5C4D1EBB0A1C00BD83D1 /* JAlertViewHelper.m in Sources */,
+				042C70391EC452340035A912 /* LBXScanNative.m in Sources */,
+				042C703F1EC452340035A912 /* LBXScanWrapper.m in Sources */,
 				04AD5C461EBB0A1C00BD83D1 /* AutoScroller.m in Sources */,
 				045B01081EB9C69F00107CC2 /* AppDelegate.m in Sources */,
 				045B01111EB9C69F00107CC2 /* HuiDian.xcdatamodeld in Sources */,
+				042C70371EC452340035A912 /* LBXAlertAction.m in Sources */,
+				042C703D1EC452340035A912 /* LBXScanViewController.m in Sources */,
 				04614A3D1EC1A2B60056951B /* RegisterViewController.m in Sources */,
 				04AD5C541EBB0A1C00BD83D1 /* SortButtonSwitchView.m in Sources */,
 				04614A571EC1C4930056951B /* WalletView1.m in Sources */,
@@ -687,21 +850,32 @@
 				04AD5C531EBB0A1C00BD83D1 /* ShellCoinPageControlView.m in Sources */,
 				04AD5C551EBB0A1C00BD83D1 /* SwipeView.m in Sources */,
 				04AD5C571EBB0A1C00BD83D1 /* UILabel+StringFrame.m in Sources */,
+				042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */,
 				04AD5C741EBB0B3500BD83D1 /* BaseTableViewCell.m in Sources */,
 				04614A621EC1C6E50056951B /* WalletDynamicOtherTableViewCell.m in Sources */,
 				045B01051EB9C69F00107CC2 /* main.m in Sources */,
 				04AD5CD01EBB0BE800BD83D1 /* Colours.m in Sources */,
+				042C6FBD1EC4053A0035A912 /* ZZCircleProgress.m in Sources */,
 				04AD5C501EBB0A1C00BD83D1 /* NothingView.m in Sources */,
+				042C70361EC452340035A912 /* UIAlertView+LBXAlertAction.m in Sources */,
+				04ED913A1EC2C0B9009384FF /* BillDataModel.m in Sources */,
+				042C703B1EC452340035A912 /* LBXScanResult.m in Sources */,
 				04614A4B1EC1B4010056951B /* MineTableViewCell.m in Sources */,
+				042C70411EC452340035A912 /* ZXingWrapper.m in Sources */,
 				04AD5C4A1EBB0A1C00BD83D1 /* HttpClient.m in Sources */,
+				042C703A1EC452340035A912 /* LBXScanNetAnimation.m in Sources */,
 				04614A661EC1C8670056951B /* WalletView2.m in Sources */,
 				04AD5C491EBB0A1C00BD83D1 /* BaseHttpClient.m in Sources */,
 				04AD5C771EBB0B3500BD83D1 /* HDUserInfo.m in Sources */,
 				04AD5C711EBB0B3500BD83D1 /* BaseModel.m in Sources */,
+				042C6FC81EC444F40035A912 /* RealNameSetViewController.m in Sources */,
 				04AD5C721EBB0B3500BD83D1 /* BaseNavigationBar.m in Sources */,
 				04AD5C701EBB0B3500BD83D1 /* BaseHtmlViewController.m in Sources */,
+				042C70351EC452340035A912 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				04614A5D1EC1C58B0056951B /* WalletDynammicTableViewCell.m in Sources */,
 				04614A471EC1ADC10056951B /* MineViewController.m in Sources */,
+				042C70401EC452340035A912 /* LBXZXCapture.m in Sources */,
+				042C703C1EC452340035A912 /* LBXScanView.m in Sources */,
 				04614A6B1EC1C8C80056951B /* WalletView3.m in Sources */,
 				04614A381EC164420056951B /* ForgetPasswordViewController.m in Sources */,
 				04AD5C751EBB0B3500BD83D1 /* BaseViewController.m in Sources */,
@@ -858,6 +1032,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdAPI/share/UMSocial_Sdk_4.4",
 					"$(PROJECT_DIR)/ThirdAPI/UMStatistics_4.1.4",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/UMSocial_Sdk_4.4",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/UMStatistics_4.1.4",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HuiDian/PrefixHeader.pch";
 				INFOPLIST_FILE = HuiDian/Info.plist;
@@ -867,6 +1043,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdAPI/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/ThirdAPI/share/Wechat",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/UMessage_Sdk_1.2.3",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/Wechat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -882,6 +1060,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdAPI/share/UMSocial_Sdk_4.4",
 					"$(PROJECT_DIR)/ThirdAPI/UMStatistics_4.1.4",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/UMSocial_Sdk_4.4",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/UMStatistics_4.1.4",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HuiDian/PrefixHeader.pch";
 				INFOPLIST_FILE = HuiDian/Info.plist;
@@ -891,6 +1071,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdAPI/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/ThirdAPI/share/Wechat",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/UMessage_Sdk_1.2.3",
+					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/Wechat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDian;
 				PRODUCT_NAME = "$(TARGET_NAME)";

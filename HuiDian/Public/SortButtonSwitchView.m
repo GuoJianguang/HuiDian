@@ -31,7 +31,7 @@
         [btn setTitleColor:MacoTitleColor  forState:UIControlStateSelected];
         [btn setTitle:_titleArray[i] forState:UIControlStateNormal];
         [self addSubview:btn];
-        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        btn.titleLabel.font = [UIFont systemFontOfSize:15];
         btn.backgroundColor = [UIColor clearColor];
         [btn addTarget:self action:@selector(sortBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -114,7 +114,7 @@
     }
     for (int i = 11; i < _titleArray.count + 11; i ++) {
         ((UIButton *)[self viewWithTag:i]).selected = NO;
-        ((UIButton *)[self viewWithTag:i]).titleLabel.font = [UIFont boldSystemFontOfSize:14];
+        ((UIButton *)[self viewWithTag:i]).titleLabel.font = [UIFont boldSystemFontOfSize:15];
     }
     sender.selected = YES;
     [self setNeedsLayout];
@@ -127,7 +127,7 @@
     mark = index + 1;
     for (int i = 11; i < _titleArray.count + 11; i ++) {
         ((UIButton *)[self viewWithTag:i]).selected = NO;
-        ((UIButton *)[self viewWithTag:i]).titleLabel.font = [UIFont boldSystemFontOfSize:14];
+        ((UIButton *)[self viewWithTag:i]).titleLabel.font = [UIFont boldSystemFontOfSize:15];
     }
     ((UIButton *)[self viewWithTag:index + 11]).selected = YES;
 //    ((UIButton *)[self viewWithTag:index + 11]).titleLabel.font = [UIFont boldSystemFontOfSize:18];

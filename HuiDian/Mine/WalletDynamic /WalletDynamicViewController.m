@@ -12,7 +12,7 @@
 #import "WalletView1.h"
 
 
-@interface WalletDynamicViewController ()<SwipeViewDelegate,SwipeViewDataSource>
+@interface WalletDynamicViewController ()<SwipeViewDelegate,SwipeViewDataSource,SortButtonSwitchViewDelegate>
 
 @property (nonatomic, strong)WalletView2 *withDrawView;
 @property (nonatomic, strong)WalletView1 *orderView;
@@ -28,6 +28,7 @@
     [self.view sendSubviewToBack:self.bgImageView];
     self.isWhiteBg = YES;
     self.sortView.titleArray = @[@"订单记录",@"提现记录",@"每日收益"];
+    self.sortView.delegate = self;
     self.naviBar.lineVIew.hidden = YES;
     self.swipew.dataSource = self;
     self.swipew.delegate = self;
@@ -85,7 +86,6 @@
             [self.withDrawView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.edges.equalTo(view).insets(insets);
             }];
-            
         }
             break;
         case 2:{
@@ -93,7 +93,6 @@
             [self.earningsView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.edges.equalTo(view).insets(insets);
             }];
-            
         }
             break;
             

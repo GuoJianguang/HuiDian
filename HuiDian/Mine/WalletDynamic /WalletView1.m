@@ -8,6 +8,7 @@
 
 #import "WalletView1.h"
 #import "WalletDynamicOtherTableViewCell.h"
+#import "BillDataModel.h"
 
 @interface WalletView1()<UITableViewDelegate,UITableViewDataSource>
 
@@ -33,16 +34,19 @@
         self.tableView.dataSource = self;
         self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             weak_self.page = 1;
-//            [weak_self getxiaofeijiluRequest:YES];
+            [weak_self getxiaofeijiluRequest:YES];
         }];
         self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-//            [weak_self getxiaofeijiluRequest:NO];
+            [weak_self getxiaofeijiluRequest:NO];
         }];
         [self.tableView noDataSouce];
         [self reload];
     }
     return self;
 }
+
+
+
 - (NSMutableArray *)dataSouceArray
 {
     if (!_dataSouceArray) {
@@ -51,10 +55,50 @@
     return _dataSouceArray;
 }
 
+#pragma mark - 接口请求
+- (void)getxiaofeijiluRequest:(BOOL)isHeader
+{
+    NSDictionary *prams = @{@"pageNo":@(self.page),
+                            @"pageSize":MacoRequestPageCount,
+                            @"token":[HDUserInfo shareUserInfos].token};
+    [HttpClient POST:@"user/wallet/consumRecord/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if (isHeader) {
+                [self.dataSouceArray removeAllObjects];
+            }
+            NSArray *array =jsonObject[@"data"][@"data"];
+            if (array.count > 0) {
+                self.page ++;
+            }
+            for (NSDictionary *dic in array) {
+                BillDataModel *model = [BillDataModel modelWithDic:dic];
+                [self.dataSouceArray addObject:model];
+            }
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray];
+            [self.tableView reloadData];
+        }
+        if (isHeader) {
+            [self.tableView.mj_header endRefreshing];
+        }else{
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        [self.tableView showNoDataSouceNoNetworkConnection];
+        if (isHeader) {
+            [self.tableView.mj_header endRefreshing];
+        }else{
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
+    }];
+}
+
+
+
 #pragma mark - TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
     return  self.dataSouceArray.count;
 }
 
@@ -70,7 +114,7 @@
     if (!cell) {
         cell = [WalletDynamicOtherTableViewCell newCell];
     }
-//    cell.xiaofeijiluModel = self.dataSouceArray[indexPath.row];
+    cell.xiaofeijiluModel = self.dataSouceArray[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }

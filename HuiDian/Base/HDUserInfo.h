@@ -81,8 +81,6 @@
 @property (nonatomic, copy)NSString *plusRate;
 
 
-
-
 #pragma mark - 老数据
 //设备token
 
@@ -194,8 +192,6 @@
 @property (nonatomic,copy)NSString *lastRebateBalance;
 //昨日收益购物券
 @property (nonatomic,copy)NSString *lastRebateConsumeBalance;
-
-
 
 @property (nonatomic, assign)BOOL isShowPay;
 

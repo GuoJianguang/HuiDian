@@ -41,6 +41,12 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.view sendSubviewToBack:self.bgImageView];
+}
+
 - (UIImageView *)bgImageView
 {
     if (!_bgImageView) {

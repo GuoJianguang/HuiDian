@@ -51,14 +51,14 @@
                             <constraint firstItem="rfX-ub-Yet" firstAttribute="top" secondItem="ETj-8H-LKq" secondAttribute="bottom" id="g2E-RM-sNB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="个人中心" id="3TJ-rR-QVT"/>
+                    <tabBarItem key="tabBarItem" title="个人中心" image="icon_personal_center" selectedImage="icon_personal_center" id="3TJ-rR-QVT"/>
                     <connections>
                         <outlet property="tableView" destination="ETj-8H-LKq" id="iF4-Cp-GWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwe-HT-ZPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="179"/>
+            <point key="canvasLocation" x="-663" y="210"/>
         </scene>
         <!--商家-->
         <scene sceneID="Vru-kB-DnA">
@@ -73,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="商家" id="87G-4F-Gc8"/>
+                    <tabBarItem key="tabBarItem" title="商家" image="icon_shop" selectedImage="icon_shop" id="87G-4F-Gc8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug7-ou-7ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,4 +99,8 @@
             <point key="canvasLocation" x="-1508" y="-143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_personal_center" width="30" height="30"/>
+        <image name="icon_shop" width="30" height="30"/>
+    </resources>
 </document>

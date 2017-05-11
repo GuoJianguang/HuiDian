@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZZCircleProgress.h"
 
 @interface MineTableViewCell : BaseTableViewCell
 
@@ -28,4 +29,20 @@
 - (IBAction)setBtn:(UIButton *)sender;
 
 - (IBAction)walletBtn:(UIButton *)sender;
+
+@property (strong, nonatomic) ZZCircleProgress *amountProgressView;
+@property (strong, nonatomic) ZZCircleProgress *lainAmountProgressView;
+
+@property (weak, nonatomic) IBOutlet UIView *progressSuperView;
+
+@property (weak, nonatomic) IBOutlet UIView *xiaofeiView;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *totalconsumptionAmount;
+@property (weak, nonatomic) IBOutlet UILabel *waitfeedback;
+
+@property (weak, nonatomic) IBOutlet UILabel *walletLabel;
+@property (weak, nonatomic) IBOutlet UILabel *setLabel;
+
 @end
