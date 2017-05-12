@@ -10,6 +10,9 @@
 #import "RealNameSetViewController.h"
 #import "EditPasswordViewController.h"
 #import "AdressListViewController.h"
+
+#import "BankCardManageViewController.h"
+
 @interface SetViewController ()<BasenavigationDelegate>
 
 @end
@@ -67,7 +70,30 @@
     [self.navigationController pushViewController:realNameVC animated:YES];
 }
 - (IBAction)bankManageMentBtn:(UIButton *)sender {
-    
+    if ([self gotRealNameRu:@"在您管理您的银行卡之前，请先进行实名认证"]){
+        return;
+    }
+    if ([HDUserInfo shareUserInfos].bindingFlag){
+        sender.enabled = NO;
+        NSDictionary *parms = @{@"token":[HDUserInfo shareUserInfos].token};
+        [HttpClient GET:@"user/withdraw/bindBankcard/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+            if (IsRequestTrue) {
+                BankCardManageViewController *bankcardVC = [[BankCardManageViewController alloc]init];
+                bankcardVC.isYetBingdingCard = YES;
+                bankcardVC.bankcardInfo = jsonObject[@"data"];
+                [self.navigationController pushViewController:bankcardVC animated:YES];
+            }
+            sender.enabled = YES;
+        }failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            sender.enabled = YES;
+        }];
+        return;
+    }
+    BankCardManageViewController *bankcardVC = [[BankCardManageViewController alloc]init];
+    bankcardVC.isYetRealnameAuthentication = YES;
+    bankcardVC.realnameAuDic = @{@"name":[HDUserInfo shareUserInfos].idcardName,
+                                 @"idcardnumber":[HDUserInfo shareUserInfos].idcard};
+    [self.navigationController pushViewController:bankcardVC animated:YES];
 }
 - (IBAction)addressBtn:(UIButton *)sender {
     AdressListViewController *addressVC = [[AdressListViewController alloc]init];
@@ -129,5 +155,28 @@
     [action setValue:MacoTitleColor forKey:@"_titleTextColor"];
     [alertController addAction:action];
 }
+
+#pragma mark - 去进行实名认证
+- (BOOL)gotRealNameRu:(NSString *)alerTitle
+{
+    if (![HDUserInfo shareUserInfos].identityFlag) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:alerTitle preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去认证" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //去进行实名认证
+            RealNameSetViewController *realNameVC = [[RealNameSetViewController alloc]init];
+            realNameVC.isYetAut = NO;
+            [self.navigationController pushViewController:realNameVC animated:YES];
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self presentViewController:alertcontroller animated:YES completion:NULL];
+        return YES;
+    }
+    return NO;
+}
+
+
 
 @end

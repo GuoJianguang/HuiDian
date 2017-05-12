@@ -19,6 +19,11 @@
 		040FED121EC5603600CE0BC7 /* EditShippingAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED101EC5603600CE0BC7 /* EditShippingAddressViewController.xib */; };
 		040FED151EC5633600CE0BC7 /* PSCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED141EC5633600CE0BC7 /* PSCityPickerView.m */; };
 		040FED171EC5668500CE0BC7 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040FED161EC5668500CE0BC7 /* city.plist */; };
+		040FED1C1EC5886900CE0BC7 /* BankCardManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED1A1EC5886900CE0BC7 /* BankCardManageViewController.m */; };
+		040FED1D1EC5886900CE0BC7 /* BankCardManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED1B1EC5886900CE0BC7 /* BankCardManageViewController.xib */; };
+		040FED211EC58B6C00CE0BC7 /* BankCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED1F1EC58B6C00CE0BC7 /* BankCardTableViewCell.m */; };
+		040FED221EC58B6C00CE0BC7 /* BankCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED201EC58B6C00CE0BC7 /* BankCardTableViewCell.xib */; };
+		040FED251EC5A3D500CE0BC7 /* BankPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED241EC5A3D500CE0BC7 /* BankPickView.m */; };
 		041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD51EBC16F90084D2D4 /* Base.xcassets */; };
 		041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD71EBC17720084D2D4 /* Login.xcassets */; };
 		042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */; };
@@ -142,6 +147,14 @@
 		040FED131EC5633600CE0BC7 /* PSCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCityPickerView.h; sourceTree = "<group>"; };
 		040FED141EC5633600CE0BC7 /* PSCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCityPickerView.m; sourceTree = "<group>"; };
 		040FED161EC5668500CE0BC7 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		040FED191EC5886900CE0BC7 /* BankCardManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardManageViewController.h; sourceTree = "<group>"; };
+		040FED1A1EC5886900CE0BC7 /* BankCardManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardManageViewController.m; sourceTree = "<group>"; };
+		040FED1B1EC5886900CE0BC7 /* BankCardManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardManageViewController.xib; sourceTree = "<group>"; };
+		040FED1E1EC58B6C00CE0BC7 /* BankCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTableViewCell.h; sourceTree = "<group>"; };
+		040FED1F1EC58B6C00CE0BC7 /* BankCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTableViewCell.m; sourceTree = "<group>"; };
+		040FED201EC58B6C00CE0BC7 /* BankCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTableViewCell.xib; sourceTree = "<group>"; };
+		040FED231EC5A3D500CE0BC7 /* BankPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankPickView.h; sourceTree = "<group>"; };
+		040FED241EC5A3D500CE0BC7 /* BankPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankPickView.m; sourceTree = "<group>"; };
 		041C7CD51EBC16F90084D2D4 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
 		041C7CD71EBC17720084D2D4 /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
 		042C6FB61EC405390035A912 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
@@ -343,6 +356,21 @@
 			path = EditAddress;
 			sourceTree = "<group>";
 		};
+		040FED181EC587FC00CE0BC7 /* BankCardManmagement */ = {
+			isa = PBXGroup;
+			children = (
+				040FED191EC5886900CE0BC7 /* BankCardManageViewController.h */,
+				040FED1A1EC5886900CE0BC7 /* BankCardManageViewController.m */,
+				040FED1B1EC5886900CE0BC7 /* BankCardManageViewController.xib */,
+				040FED1E1EC58B6C00CE0BC7 /* BankCardTableViewCell.h */,
+				040FED1F1EC58B6C00CE0BC7 /* BankCardTableViewCell.m */,
+				040FED201EC58B6C00CE0BC7 /* BankCardTableViewCell.xib */,
+				040FED231EC5A3D500CE0BC7 /* BankPickView.h */,
+				040FED241EC5A3D500CE0BC7 /* BankPickView.m */,
+			);
+			path = BankCardManmagement;
+			sourceTree = "<group>";
+		};
 		042C6FB51EC405390035A912 /* ZZCircleProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +386,7 @@
 		042C6FBE1EC438C70035A912 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				040FED181EC587FC00CE0BC7 /* BankCardManmagement */,
 				040FECFE1EC559D300CE0BC7 /* EditAddress */,
 				042C6FBF1EC438DA0035A912 /* SetViewController.h */,
 				042C6FC01EC438DA0035A912 /* SetViewController.m */,
@@ -795,11 +824,13 @@
 				04614A541EC1BE0F0056951B /* WalletDynamicViewController.xib in Resources */,
 				041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */,
 				042C6FBC1EC4053A0035A912 /* ZZCircleProgress.bundle in Resources */,
+				040FED1D1EC5886900CE0BC7 /* BankCardManageViewController.xib in Resources */,
 				04614A4E1EC1B8080056951B /* Mine.xcassets in Resources */,
 				04AD5C521EBB0A1C00BD83D1 /* Public.xcassets in Resources */,
 				04AD5C4F1EBB0A1C00BD83D1 /* merchantHeader.jpg in Resources */,
 				04AD5C511EBB0A1C00BD83D1 /* NothingView.xib in Resources */,
 				041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */,
+				040FED221EC58B6C00CE0BC7 /* BankCardTableViewCell.xib in Resources */,
 				042C6FC31EC438DA0035A912 /* SetViewController.xib in Resources */,
 				04614A5E1EC1C58B0056951B /* WalletDynammicTableViewCell.xib in Resources */,
 				040FED171EC5668500CE0BC7 /* city.plist in Resources */,
@@ -893,6 +924,7 @@
 				042C70381EC452340035A912 /* LBXScanLineAnimation.m in Sources */,
 				04AD5C6F1EBB0B3500BD83D1 /* BaseCollectionViewCell.m in Sources */,
 				04AD5C4C1EBB0A1C00BD83D1 /* HttpClientAlertViewHelper.m in Sources */,
+				040FED251EC5A3D500CE0BC7 /* BankPickView.m in Sources */,
 				045B010B1EB9C69F00107CC2 /* ViewController.m in Sources */,
 				04614A531EC1BE0F0056951B /* WalletDynamicViewController.m in Sources */,
 				04AD5CD31EBB0CF000BD83D1 /* LoginViewController.m in Sources */,
@@ -939,6 +971,7 @@
 				042C6FC81EC444F40035A912 /* RealNameSetViewController.m in Sources */,
 				04AD5C721EBB0B3500BD83D1 /* BaseNavigationBar.m in Sources */,
 				04AD5C701EBB0B3500BD83D1 /* BaseHtmlViewController.m in Sources */,
+				040FED211EC58B6C00CE0BC7 /* BankCardTableViewCell.m in Sources */,
 				042C70351EC452340035A912 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				04614A5D1EC1C58B0056951B /* WalletDynammicTableViewCell.m in Sources */,
 				04614A471EC1ADC10056951B /* MineViewController.m in Sources */,
@@ -947,6 +980,7 @@
 				04614A6B1EC1C8C80056951B /* WalletView3.m in Sources */,
 				04614A381EC164420056951B /* ForgetPasswordViewController.m in Sources */,
 				04AD5C751EBB0B3500BD83D1 /* BaseViewController.m in Sources */,
+				040FED1C1EC5886900CE0BC7 /* BankCardManageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

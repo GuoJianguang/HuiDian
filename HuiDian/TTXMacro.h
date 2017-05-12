@@ -25,8 +25,8 @@
 #define WXApiKey @"wx0032c653b99c31f1"
 
 //密码md5加密key
-//#define PasswordKey @"SV245HYJH"
-#define PasswordKey @"PW2017$LY"
+#define PasswordKey @"PW2017$HD"
+//#define PasswordKey @"PW2017$LY"
 //PW2017$LY
 //生成订单md5加密key
 #define OrderWithMd5Key @"T2t0X16"
