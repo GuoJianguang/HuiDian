@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040FECFC1EC552E000CE0BC7 /* EditPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FECFA1EC552E000CE0BC7 /* EditPasswordViewController.m */; };
+		040FECFD1EC552E000CE0BC7 /* EditPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FECFB1EC552E000CE0BC7 /* EditPasswordViewController.xib */; };
+		040FED021EC559EB00CE0BC7 /* AdressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED001EC559EB00CE0BC7 /* AdressListViewController.m */; };
+		040FED031EC559EB00CE0BC7 /* AdressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED011EC559EB00CE0BC7 /* AdressListViewController.xib */; };
+		040FED071EC55A6200CE0BC7 /* ShippingAlerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED051EC55A6200CE0BC7 /* ShippingAlerTableViewCell.m */; };
+		040FED081EC55A6200CE0BC7 /* ShippingAlerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED061EC55A6200CE0BC7 /* ShippingAlerTableViewCell.xib */; };
+		040FED0C1EC55B6100CE0BC7 /* ShippingALTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED0A1EC55B6100CE0BC7 /* ShippingALTableViewCell.m */; };
+		040FED0D1EC55B6100CE0BC7 /* ShippingALTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED0B1EC55B6100CE0BC7 /* ShippingALTableViewCell.xib */; };
+		040FED111EC5603600CE0BC7 /* EditShippingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED0F1EC5603600CE0BC7 /* EditShippingAddressViewController.m */; };
+		040FED121EC5603600CE0BC7 /* EditShippingAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FED101EC5603600CE0BC7 /* EditShippingAddressViewController.xib */; };
+		040FED151EC5633600CE0BC7 /* PSCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED141EC5633600CE0BC7 /* PSCityPickerView.m */; };
+		040FED171EC5668500CE0BC7 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040FED161EC5668500CE0BC7 /* city.plist */; };
 		041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD51EBC16F90084D2D4 /* Base.xcassets */; };
 		041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD71EBC17720084D2D4 /* Login.xcassets */; };
 		042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */; };
@@ -112,6 +124,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040FECF91EC552E000CE0BC7 /* EditPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPasswordViewController.h; sourceTree = "<group>"; };
+		040FECFA1EC552E000CE0BC7 /* EditPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPasswordViewController.m; sourceTree = "<group>"; };
+		040FECFB1EC552E000CE0BC7 /* EditPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPasswordViewController.xib; sourceTree = "<group>"; };
+		040FECFF1EC559EB00CE0BC7 /* AdressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdressListViewController.h; sourceTree = "<group>"; };
+		040FED001EC559EB00CE0BC7 /* AdressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdressListViewController.m; sourceTree = "<group>"; };
+		040FED011EC559EB00CE0BC7 /* AdressListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdressListViewController.xib; sourceTree = "<group>"; };
+		040FED041EC55A6200CE0BC7 /* ShippingAlerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingAlerTableViewCell.h; sourceTree = "<group>"; };
+		040FED051EC55A6200CE0BC7 /* ShippingAlerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingAlerTableViewCell.m; sourceTree = "<group>"; };
+		040FED061EC55A6200CE0BC7 /* ShippingAlerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShippingAlerTableViewCell.xib; sourceTree = "<group>"; };
+		040FED091EC55B6100CE0BC7 /* ShippingALTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingALTableViewCell.h; sourceTree = "<group>"; };
+		040FED0A1EC55B6100CE0BC7 /* ShippingALTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingALTableViewCell.m; sourceTree = "<group>"; };
+		040FED0B1EC55B6100CE0BC7 /* ShippingALTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShippingALTableViewCell.xib; sourceTree = "<group>"; };
+		040FED0E1EC5603600CE0BC7 /* EditShippingAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditShippingAddressViewController.h; sourceTree = "<group>"; };
+		040FED0F1EC5603600CE0BC7 /* EditShippingAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditShippingAddressViewController.m; sourceTree = "<group>"; };
+		040FED101EC5603600CE0BC7 /* EditShippingAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditShippingAddressViewController.xib; sourceTree = "<group>"; };
+		040FED131EC5633600CE0BC7 /* PSCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCityPickerView.h; sourceTree = "<group>"; };
+		040FED141EC5633600CE0BC7 /* PSCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCityPickerView.m; sourceTree = "<group>"; };
+		040FED161EC5668500CE0BC7 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		041C7CD51EBC16F90084D2D4 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
 		041C7CD71EBC17720084D2D4 /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
 		042C6FB61EC405390035A912 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
@@ -291,6 +321,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040FECFE1EC559D300CE0BC7 /* EditAddress */ = {
+			isa = PBXGroup;
+			children = (
+				040FECFF1EC559EB00CE0BC7 /* AdressListViewController.h */,
+				040FED001EC559EB00CE0BC7 /* AdressListViewController.m */,
+				040FED011EC559EB00CE0BC7 /* AdressListViewController.xib */,
+				040FED041EC55A6200CE0BC7 /* ShippingAlerTableViewCell.h */,
+				040FED051EC55A6200CE0BC7 /* ShippingAlerTableViewCell.m */,
+				040FED061EC55A6200CE0BC7 /* ShippingAlerTableViewCell.xib */,
+				040FED091EC55B6100CE0BC7 /* ShippingALTableViewCell.h */,
+				040FED0A1EC55B6100CE0BC7 /* ShippingALTableViewCell.m */,
+				040FED0B1EC55B6100CE0BC7 /* ShippingALTableViewCell.xib */,
+				040FED0E1EC5603600CE0BC7 /* EditShippingAddressViewController.h */,
+				040FED0F1EC5603600CE0BC7 /* EditShippingAddressViewController.m */,
+				040FED101EC5603600CE0BC7 /* EditShippingAddressViewController.xib */,
+				040FED131EC5633600CE0BC7 /* PSCityPickerView.h */,
+				040FED141EC5633600CE0BC7 /* PSCityPickerView.m */,
+				040FED161EC5668500CE0BC7 /* city.plist */,
+			);
+			path = EditAddress;
+			sourceTree = "<group>";
+		};
 		042C6FB51EC405390035A912 /* ZZCircleProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,9 +358,13 @@
 		042C6FBE1EC438C70035A912 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				040FECFE1EC559D300CE0BC7 /* EditAddress */,
 				042C6FBF1EC438DA0035A912 /* SetViewController.h */,
 				042C6FC01EC438DA0035A912 /* SetViewController.m */,
 				042C6FC11EC438DA0035A912 /* SetViewController.xib */,
+				040FECF91EC552E000CE0BC7 /* EditPasswordViewController.h */,
+				040FECFA1EC552E000CE0BC7 /* EditPasswordViewController.m */,
+				040FECFB1EC552E000CE0BC7 /* EditPasswordViewController.xib */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -728,10 +784,13 @@
 				04614A391EC164420056951B /* ForgetPasswordViewController.xib in Resources */,
 				04AD5C1D1EBB089600BD83D1 /* Login.storyboard in Resources */,
 				04614A6D1EC1C8D30056951B /* WalletView3.xib in Resources */,
+				040FED121EC5603600CE0BC7 /* EditShippingAddressViewController.xib in Resources */,
+				040FED081EC55A6200CE0BC7 /* ShippingAlerTableViewCell.xib in Resources */,
 				04614A4C1EC1B4010056951B /* MineTableViewCell.xib in Resources */,
 				045B01161EB9C69F00107CC2 /* LaunchScreen.storyboard in Resources */,
 				045B01131EB9C69F00107CC2 /* Assets.xcassets in Resources */,
 				04AD5C731EBB0B3500BD83D1 /* BaseNavigationBar.xib in Resources */,
+				040FED0D1EC55B6100CE0BC7 /* ShippingALTableViewCell.xib in Resources */,
 				04AD5C471EBB0A1C00BD83D1 /* HomebannerDefault.jpg in Resources */,
 				04614A541EC1BE0F0056951B /* WalletDynamicViewController.xib in Resources */,
 				041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */,
@@ -743,11 +802,14 @@
 				041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */,
 				042C6FC31EC438DA0035A912 /* SetViewController.xib in Resources */,
 				04614A5E1EC1C58B0056951B /* WalletDynammicTableViewCell.xib in Resources */,
+				040FED171EC5668500CE0BC7 /* city.plist in Resources */,
+				040FED031EC559EB00CE0BC7 /* AdressListViewController.xib in Resources */,
 				04614A3E1EC1A2B60056951B /* RegisterViewController.xib in Resources */,
 				045B010E1EB9C69F00107CC2 /* Main.storyboard in Resources */,
 				04AD5C481EBB0A1C00BD83D1 /* 213955937960616.cer in Resources */,
 				04614A681EC1C8720056951B /* WalletView2.xib in Resources */,
 				042C6FC91EC444F40035A912 /* RealNameSetViewController.xib in Resources */,
+				040FECFD1EC552E000CE0BC7 /* EditPasswordViewController.xib in Resources */,
 				04614A591EC1C49F0056951B /* WalletView1.xib in Resources */,
 				04614A631EC1C6E50056951B /* WalletDynamicOtherTableViewCell.xib in Resources */,
 				042C70341EC452340035A912 /* CodeScan.bundle in Resources */,
@@ -827,6 +889,7 @@
 				042C703E1EC452340035A912 /* LBXScanViewStyle.m in Sources */,
 				04AD5C761EBB0B3500BD83D1 /* LocationManager.m in Sources */,
 				04AD5C561EBB0A1C00BD83D1 /* UIImage+ColorImage.m in Sources */,
+				040FED111EC5603600CE0BC7 /* EditShippingAddressViewController.m in Sources */,
 				042C70381EC452340035A912 /* LBXScanLineAnimation.m in Sources */,
 				04AD5C6F1EBB0B3500BD83D1 /* BaseCollectionViewCell.m in Sources */,
 				04AD5C4C1EBB0A1C00BD83D1 /* HttpClientAlertViewHelper.m in Sources */,
@@ -846,6 +909,7 @@
 				04614A3D1EC1A2B60056951B /* RegisterViewController.m in Sources */,
 				04AD5C541EBB0A1C00BD83D1 /* SortButtonSwitchView.m in Sources */,
 				04614A571EC1C4930056951B /* WalletView1.m in Sources */,
+				040FED151EC5633600CE0BC7 /* PSCityPickerView.m in Sources */,
 				04AD5C581EBB0A1C00BD83D1 /* UIScrollView+NoDataSouce.m in Sources */,
 				04AD5C531EBB0A1C00BD83D1 /* ShellCoinPageControlView.m in Sources */,
 				04AD5C551EBB0A1C00BD83D1 /* SwipeView.m in Sources */,
@@ -853,6 +917,7 @@
 				042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */,
 				04AD5C741EBB0B3500BD83D1 /* BaseTableViewCell.m in Sources */,
 				04614A621EC1C6E50056951B /* WalletDynamicOtherTableViewCell.m in Sources */,
+				040FED021EC559EB00CE0BC7 /* AdressListViewController.m in Sources */,
 				045B01051EB9C69F00107CC2 /* main.m in Sources */,
 				04AD5CD01EBB0BE800BD83D1 /* Colours.m in Sources */,
 				042C6FBD1EC4053A0035A912 /* ZZCircleProgress.m in Sources */,
@@ -863,11 +928,14 @@
 				04614A4B1EC1B4010056951B /* MineTableViewCell.m in Sources */,
 				042C70411EC452340035A912 /* ZXingWrapper.m in Sources */,
 				04AD5C4A1EBB0A1C00BD83D1 /* HttpClient.m in Sources */,
+				040FECFC1EC552E000CE0BC7 /* EditPasswordViewController.m in Sources */,
+				040FED071EC55A6200CE0BC7 /* ShippingAlerTableViewCell.m in Sources */,
 				042C703A1EC452340035A912 /* LBXScanNetAnimation.m in Sources */,
 				04614A661EC1C8670056951B /* WalletView2.m in Sources */,
 				04AD5C491EBB0A1C00BD83D1 /* BaseHttpClient.m in Sources */,
 				04AD5C771EBB0B3500BD83D1 /* HDUserInfo.m in Sources */,
 				04AD5C711EBB0B3500BD83D1 /* BaseModel.m in Sources */,
+				040FED0C1EC55B6100CE0BC7 /* ShippingALTableViewCell.m in Sources */,
 				042C6FC81EC444F40035A912 /* RealNameSetViewController.m in Sources */,
 				04AD5C721EBB0B3500BD83D1 /* BaseNavigationBar.m in Sources */,
 				04AD5C701EBB0B3500BD83D1 /* BaseHtmlViewController.m in Sources */,

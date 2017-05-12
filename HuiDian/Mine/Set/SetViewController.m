@@ -8,7 +8,8 @@
 
 #import "SetViewController.h"
 #import "RealNameSetViewController.h"
-
+#import "EditPasswordViewController.h"
+#import "AdressListViewController.h"
 @interface SetViewController ()<BasenavigationDelegate>
 
 @end
@@ -69,16 +70,26 @@
     
 }
 - (IBAction)addressBtn:(UIButton *)sender {
+    AdressListViewController *addressVC = [[AdressListViewController alloc]init];
+    [self.navigationController pushViewController:addressVC animated:YES];
     
 }
 - (IBAction)editPasswordBtn:(UIButton *)sender {
+    EditPasswordViewController *passwordVC = [[EditPasswordViewController alloc]init];
+    [self.navigationController pushViewController:passwordVC animated:YES];
     
 }
 - (IBAction)myRecommendBtn:(UIButton *)sender {
     
 }
 - (IBAction)ClearCacheBtn:(UIButton *)sender {
-    
+    [SVProgressHUD showWithStatus:@"正在清除..."];
+    [[SDImageCache sharedImageCache]clearDisk];
+    [[SDImageCache sharedImageCache]clearMemory];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        [SVProgressHUD showSuccessWithStatus:@"清除完毕"];
+        
+    }];
 }
 
 - (IBAction)aboutsBtn:(UIButton *)sender {
