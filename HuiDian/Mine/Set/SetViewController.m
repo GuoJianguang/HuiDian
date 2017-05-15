@@ -10,7 +10,7 @@
 #import "RealNameSetViewController.h"
 #import "EditPasswordViewController.h"
 #import "AdressListViewController.h"
-
+#import "MyRecommendListViewController.h"
 #import "BankCardManageViewController.h"
 
 @interface SetViewController ()<BasenavigationDelegate>
@@ -106,7 +106,8 @@
     
 }
 - (IBAction)myRecommendBtn:(UIButton *)sender {
-    
+    MyRecommendListViewController *recommendVC = [[MyRecommendListViewController alloc]init];
+    [self.navigationController pushViewController:recommendVC animated:YES];
 }
 - (IBAction)ClearCacheBtn:(UIButton *)sender {
     [SVProgressHUD showWithStatus:@"正在清除..."];

@@ -73,7 +73,14 @@
     self.itemView1.layer.masksToBounds = YES;
     self.itemView3.layer.mask = maskLayer1;
 }
-
+- (void)setRealnameAuDic:(NSDictionary *)realnameAuDic
+{
+    _realnameAuDic = realnameAuDic;
+    self.idCardNUTF.text = _realnameAuDic[@"idcardnumber"];
+    self.idCardNUTF.enabled = NO;
+    self.nameTF.enabled = NO;
+    self.nameTF.text = _realnameAuDic[@"name"];
+}
 
 - (void)setIsMaual:(BOOL)isMaual
 {

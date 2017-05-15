@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" secondItem="RGb-2I-aE7" secondAttribute="height" id="F3v-88-2sb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="胡一刀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-eV-wTX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-eV-wTX">
                                 <rect key="frame" x="178" y="20" width="220" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,7 +109,6 @@
                                 </state>
                                 <connections>
                                     <action selector="goConsumeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uF6-Dp-bJh"/>
-                                    <action selector="withDrawBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="psC-eb-nLE"/>
                                 </connections>
                             </button>
                         </subviews>

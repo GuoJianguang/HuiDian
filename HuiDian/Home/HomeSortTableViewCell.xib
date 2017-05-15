@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeSortTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIw-d6-tkU">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="43.5"/>
+                        <state key="normal" title="全部"/>
+                        <connections>
+                            <action selector="allBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bq0-cO-6Bc"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVx-z7-8VT">
+                        <rect key="frame" x="160" y="0.0" width="160" height="43.5"/>
+                        <state key="normal" title="距离排序"/>
+                        <connections>
+                            <action selector="distanceBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vfC-cC-zH6"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2n-7Y-jzn">
+                        <rect key="frame" x="30" y="42" width="100" height="2"/>
+                        <color key="backgroundColor" red="0.79019606109999996" green="0.19106508790000001" blue="0.47459349039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="9Bz-kG-6tW"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByV-Um-uFe">
+                        <rect key="frame" x="190" y="41" width="100" height="2"/>
+                        <color key="backgroundColor" red="0.79019606109999996" green="0.19106508790000001" blue="0.47459349039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="Ddh-7J-H7g"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="oIw-d6-tkU" secondAttribute="bottom" id="2jI-kE-S2a"/>
+                    <constraint firstItem="p2n-7Y-jzn" firstAttribute="leading" secondItem="oIw-d6-tkU" secondAttribute="leading" constant="30" id="4dk-gk-Q9d"/>
+                    <constraint firstItem="p2n-7Y-jzn" firstAttribute="trailing" secondItem="oIw-d6-tkU" secondAttribute="trailing" constant="-30" id="8h2-f6-elX"/>
+                    <constraint firstAttribute="bottom" secondItem="BVx-z7-8VT" secondAttribute="bottom" id="9j6-Pg-5CM"/>
+                    <constraint firstItem="BVx-z7-8VT" firstAttribute="width" secondItem="oIw-d6-tkU" secondAttribute="width" id="Alb-09-dkO"/>
+                    <constraint firstItem="ByV-Um-uFe" firstAttribute="trailing" secondItem="BVx-z7-8VT" secondAttribute="trailing" constant="-30" id="K5M-wv-mHi"/>
+                    <constraint firstItem="BVx-z7-8VT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OBT-Xl-IFz"/>
+                    <constraint firstAttribute="trailing" secondItem="BVx-z7-8VT" secondAttribute="trailing" id="Sxd-CH-KQj"/>
+                    <constraint firstAttribute="bottom" secondItem="p2n-7Y-jzn" secondAttribute="bottom" id="W44-T7-0ZA"/>
+                    <constraint firstItem="BVx-z7-8VT" firstAttribute="leading" secondItem="oIw-d6-tkU" secondAttribute="trailing" id="Wau-QP-Qdp"/>
+                    <constraint firstItem="oIw-d6-tkU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dJW-5V-iVh"/>
+                    <constraint firstAttribute="bottom" secondItem="ByV-Um-uFe" secondAttribute="bottom" id="jCp-TZ-hmC"/>
+                    <constraint firstItem="oIw-d6-tkU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pLY-dD-ODQ"/>
+                    <constraint firstItem="ByV-Um-uFe" firstAttribute="leading" secondItem="BVx-z7-8VT" secondAttribute="leading" constant="30" id="yay-kc-RBy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="allBtn" destination="oIw-d6-tkU" id="sOg-RK-p7j"/>
+                <outlet property="allView" destination="p2n-7Y-jzn" id="PcP-O8-vNh"/>
+                <outlet property="distacneView" destination="ByV-Um-uFe" id="qky-1p-nO1"/>
+                <outlet property="distanceBtn" destination="BVx-z7-8VT" id="fgZ-xA-Xc6"/>
+            </connections>
+            <point key="canvasLocation" x="113" y="159"/>
+        </tableViewCell>
+    </objects>
+</document>

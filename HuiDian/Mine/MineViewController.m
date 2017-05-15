@@ -25,16 +25,7 @@
     self.naviBar.detailImage = [UIImage imageNamed:@"icon_scan"];
     self.naviBar.delegate = self;
     self.bgImageView.hidden = YES;
-    self.withDrawBtn.layer.cornerRadius = 15;
-    self.withDrawBtn.layer.borderWidth = 1;
-    self.withDrawBtn.layer.masksToBounds = YES;
-    self.withDrawBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.withDrawBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.yuELabel.adjustsFontSizeToFitWidth = YES;
-    
-    self.yuELabel.text = [NSString stringWithFormat:@"%.2f",[[HDUserInfo shareUserInfos].aviableBalance doubleValue]];
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
-    self.tableView.delegate = self;
+       self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(logout:) name:LogOutNSNotification object:nil];
@@ -42,6 +33,11 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 
 #pragma mark - 退出登录的操作
 - (void)logout:(NSNotification *)notification

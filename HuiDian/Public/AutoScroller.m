@@ -15,7 +15,7 @@
 
 static AutoScroller *_instance = nil;
 
-static NSTimeInterval _time = 3;
+static NSTimeInterval _time = 5;
 
 
 +(instancetype) shareAutoScroller

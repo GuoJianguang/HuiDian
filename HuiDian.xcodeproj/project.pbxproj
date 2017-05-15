@@ -26,6 +26,16 @@
 		040FED251EC5A3D500CE0BC7 /* BankPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED241EC5A3D500CE0BC7 /* BankPickView.m */; };
 		041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD51EBC16F90084D2D4 /* Base.xcassets */; };
 		041C7CD81EBC17720084D2D4 /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C7CD71EBC17720084D2D4 /* Login.xcassets */; };
+		0422F1511EC9A04E0037CB3D /* HomeIndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F14F1EC9A04E0037CB3D /* HomeIndustryTableViewCell.m */; };
+		0422F1521EC9A04E0037CB3D /* HomeIndustryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422F1501EC9A04E0037CB3D /* HomeIndustryTableViewCell.xib */; };
+		0422F1551EC9A05B0037CB3D /* SquaredUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F1541EC9A05B0037CB3D /* SquaredUpView.m */; };
+		0422F1581EC9A0670037CB3D /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F1571EC9A0670037CB3D /* CustomButton.m */; };
+		0422F15C1EC9A3750037CB3D /* MerchantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F15A1EC9A3750037CB3D /* MerchantTableViewCell.m */; };
+		0422F15D1EC9A3750037CB3D /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422F15B1EC9A3750037CB3D /* MerchantTableViewCell.xib */; };
+		0422F1601EC9A3BE0037CB3D /* MerchantDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F15F1EC9A3BE0037CB3D /* MerchantDataModel.m */; };
+		0422F1621EC9ABCE0037CB3D /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0422F1611EC9ABCE0037CB3D /* Home.xcassets */; };
+		0422F16B1EC9AE560037CB3D /* HomeSortTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F1691EC9AE560037CB3D /* HomeSortTableViewCell.m */; };
+		0422F16C1EC9AE560037CB3D /* HomeSortTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422F16A1EC9AE560037CB3D /* HomeSortTableViewCell.xib */; };
 		042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */; };
 		042C6FBC1EC4053A0035A912 /* ZZCircleProgress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 042C6FB81EC405390035A912 /* ZZCircleProgress.bundle */; };
 		042C6FBD1EC4053A0035A912 /* ZZCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C6FBA1EC405390035A912 /* ZZCircleProgress.m */; };
@@ -76,6 +86,21 @@
 		04614A681EC1C8720056951B /* WalletView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04614A671EC1C8720056951B /* WalletView2.xib */; };
 		04614A6B1EC1C8C80056951B /* WalletView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 04614A6A1EC1C8C80056951B /* WalletView3.m */; };
 		04614A6D1EC1C8D30056951B /* WalletView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04614A6C1EC1C8D30056951B /* WalletView3.xib */; };
+		047ABAB21EC978E300A5DDB1 /* MyRecommendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABAB01EC978E300A5DDB1 /* MyRecommendListViewController.m */; };
+		047ABAB31EC978E300A5DDB1 /* MyRecommendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABAB11EC978E300A5DDB1 /* MyRecommendListViewController.xib */; };
+		047ABAB71EC97AA800A5DDB1 /* MyrecommendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABAB51EC97AA800A5DDB1 /* MyrecommendTableViewCell.m */; };
+		047ABAB81EC97AA800A5DDB1 /* MyrecommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABAB61EC97AA800A5DDB1 /* MyrecommendTableViewCell.xib */; };
+		047ABAC11EC984A900A5DDB1 /* MyRecommendDetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABABF1EC984A900A5DDB1 /* MyRecommendDetailListViewController.m */; };
+		047ABAC21EC984A900A5DDB1 /* MyRecommendDetailListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABAC01EC984A900A5DDB1 /* MyRecommendDetailListViewController.xib */; };
+		047ABAC51EC985ED00A5DDB1 /* RecommendConsumersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABAC41EC985ED00A5DDB1 /* RecommendConsumersView.m */; };
+		047ABAC71EC985F700A5DDB1 /* RecommendConsumersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABAC61EC985F700A5DDB1 /* RecommendConsumersView.xib */; };
+		047ABACA1EC9867500A5DDB1 /* RecommendMerchantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABAC91EC9867500A5DDB1 /* RecommendMerchantView.m */; };
+		047ABACC1EC9867F00A5DDB1 /* RecommendMerchantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABACB1EC9867F00A5DDB1 /* RecommendMerchantView.xib */; };
+		047ABAD01EC9878500A5DDB1 /* RecommendDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABACE1EC9878500A5DDB1 /* RecommendDetailTableViewCell.m */; };
+		047ABAD11EC9878500A5DDB1 /* RecommendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABACF1EC9878500A5DDB1 /* RecommendDetailTableViewCell.xib */; };
+		047ABAD51EC99B1E00A5DDB1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABAD41EC99B1E00A5DDB1 /* HomeViewController.m */; };
+		047ABAD91EC99BC000A5DDB1 /* HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047ABAD71EC99BC000A5DDB1 /* HomeBannerTableViewCell.m */; };
+		047ABADA1EC99BC000A5DDB1 /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ABAD81EC99BC000A5DDB1 /* HomeBannerTableViewCell.xib */; };
 		04AD5C1D1EBB089600BD83D1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AD5C1C1EBB089600BD83D1 /* Login.storyboard */; };
 		04AD5C461EBB0A1C00BD83D1 /* AutoScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5C201EBB0A1C00BD83D1 /* AutoScroller.m */; };
 		04AD5C471EBB0A1C00BD83D1 /* HomebannerDefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04AD5C211EBB0A1C00BD83D1 /* HomebannerDefault.jpg */; };
@@ -107,6 +132,8 @@
 		04AD5C771EBB0B3500BD83D1 /* HDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5C6E1EBB0B3500BD83D1 /* HDUserInfo.m */; };
 		04AD5CD01EBB0BE800BD83D1 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5CCF1EBB0BE800BD83D1 /* Colours.m */; };
 		04AD5CD31EBB0CF000BD83D1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD5CD21EBB0CF000BD83D1 /* LoginViewController.m */; };
+		04E087CB1EC93C8F00D9E6E7 /* WithDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E087C91EC93C8F00D9E6E7 /* WithDrawViewController.m */; };
+		04E087CC1EC93C8F00D9E6E7 /* WithDrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E087CA1EC93C8F00D9E6E7 /* WithDrawViewController.xib */; };
 		04ED913A1EC2C0B9009384FF /* BillDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED91391EC2C0B9009384FF /* BillDataModel.m */; };
 		19CD85CA087D866FE6D97C86 /* libPods-HuiDian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC637FEF786F01FE4D2EC06 /* libPods-HuiDian.a */; };
 /* End PBXBuildFile section */
@@ -157,6 +184,22 @@
 		040FED241EC5A3D500CE0BC7 /* BankPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankPickView.m; sourceTree = "<group>"; };
 		041C7CD51EBC16F90084D2D4 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
 		041C7CD71EBC17720084D2D4 /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
+		0422F14E1EC9A04D0037CB3D /* HomeIndustryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeIndustryTableViewCell.h; sourceTree = "<group>"; };
+		0422F14F1EC9A04E0037CB3D /* HomeIndustryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIndustryTableViewCell.m; sourceTree = "<group>"; };
+		0422F1501EC9A04E0037CB3D /* HomeIndustryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeIndustryTableViewCell.xib; sourceTree = "<group>"; };
+		0422F1531EC9A05B0037CB3D /* SquaredUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquaredUpView.h; sourceTree = "<group>"; };
+		0422F1541EC9A05B0037CB3D /* SquaredUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquaredUpView.m; sourceTree = "<group>"; };
+		0422F1561EC9A0670037CB3D /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		0422F1571EC9A0670037CB3D /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		0422F1591EC9A3750037CB3D /* MerchantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantTableViewCell.h; sourceTree = "<group>"; };
+		0422F15A1EC9A3750037CB3D /* MerchantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantTableViewCell.m; sourceTree = "<group>"; };
+		0422F15B1EC9A3750037CB3D /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
+		0422F15E1EC9A3BE0037CB3D /* MerchantDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantDataModel.h; sourceTree = "<group>"; };
+		0422F15F1EC9A3BE0037CB3D /* MerchantDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantDataModel.m; sourceTree = "<group>"; };
+		0422F1611EC9ABCE0037CB3D /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
+		0422F1681EC9AE560037CB3D /* HomeSortTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSortTableViewCell.h; sourceTree = "<group>"; };
+		0422F1691EC9AE560037CB3D /* HomeSortTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSortTableViewCell.m; sourceTree = "<group>"; };
+		0422F16A1EC9AE560037CB3D /* HomeSortTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSortTableViewCell.xib; sourceTree = "<group>"; };
 		042C6FB61EC405390035A912 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
 		042C6FB71EC405390035A912 /* NSTimer+timerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+timerBlock.m"; sourceTree = "<group>"; };
 		042C6FB81EC405390035A912 /* ZZCircleProgress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZCircleProgress.bundle; sourceTree = "<group>"; };
@@ -243,6 +286,29 @@
 		04614A691EC1C8C80056951B /* WalletView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletView3.h; sourceTree = "<group>"; };
 		04614A6A1EC1C8C80056951B /* WalletView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletView3.m; sourceTree = "<group>"; };
 		04614A6C1EC1C8D30056951B /* WalletView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalletView3.xib; sourceTree = "<group>"; };
+		047ABAAF1EC978E300A5DDB1 /* MyRecommendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecommendListViewController.h; sourceTree = "<group>"; };
+		047ABAB01EC978E300A5DDB1 /* MyRecommendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecommendListViewController.m; sourceTree = "<group>"; };
+		047ABAB11EC978E300A5DDB1 /* MyRecommendListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecommendListViewController.xib; sourceTree = "<group>"; };
+		047ABAB41EC97AA800A5DDB1 /* MyrecommendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyrecommendTableViewCell.h; sourceTree = "<group>"; };
+		047ABAB51EC97AA800A5DDB1 /* MyrecommendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyrecommendTableViewCell.m; sourceTree = "<group>"; };
+		047ABAB61EC97AA800A5DDB1 /* MyrecommendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyrecommendTableViewCell.xib; sourceTree = "<group>"; };
+		047ABABE1EC984A900A5DDB1 /* MyRecommendDetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecommendDetailListViewController.h; sourceTree = "<group>"; };
+		047ABABF1EC984A900A5DDB1 /* MyRecommendDetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecommendDetailListViewController.m; sourceTree = "<group>"; };
+		047ABAC01EC984A900A5DDB1 /* MyRecommendDetailListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyRecommendDetailListViewController.xib; sourceTree = "<group>"; };
+		047ABAC31EC985ED00A5DDB1 /* RecommendConsumersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendConsumersView.h; sourceTree = "<group>"; };
+		047ABAC41EC985ED00A5DDB1 /* RecommendConsumersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendConsumersView.m; sourceTree = "<group>"; };
+		047ABAC61EC985F700A5DDB1 /* RecommendConsumersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendConsumersView.xib; sourceTree = "<group>"; };
+		047ABAC81EC9867500A5DDB1 /* RecommendMerchantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendMerchantView.h; sourceTree = "<group>"; };
+		047ABAC91EC9867500A5DDB1 /* RecommendMerchantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendMerchantView.m; sourceTree = "<group>"; };
+		047ABACB1EC9867F00A5DDB1 /* RecommendMerchantView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendMerchantView.xib; sourceTree = "<group>"; };
+		047ABACD1EC9878500A5DDB1 /* RecommendDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendDetailTableViewCell.h; sourceTree = "<group>"; };
+		047ABACE1EC9878500A5DDB1 /* RecommendDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendDetailTableViewCell.m; sourceTree = "<group>"; };
+		047ABACF1EC9878500A5DDB1 /* RecommendDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendDetailTableViewCell.xib; sourceTree = "<group>"; };
+		047ABAD31EC99B1E00A5DDB1 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		047ABAD41EC99B1E00A5DDB1 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		047ABAD61EC99BC000A5DDB1 /* HomeBannerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBannerTableViewCell.h; sourceTree = "<group>"; };
+		047ABAD71EC99BC000A5DDB1 /* HomeBannerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBannerTableViewCell.m; sourceTree = "<group>"; };
+		047ABAD81EC99BC000A5DDB1 /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
 		04AD5C1C1EBB089600BD83D1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		04AD5C1F1EBB0A1C00BD83D1 /* AutoScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScroller.h; sourceTree = "<group>"; };
 		04AD5C201EBB0A1C00BD83D1 /* AutoScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScroller.m; sourceTree = "<group>"; };
@@ -301,6 +367,9 @@
 		04AD5CCF1EBB0BE800BD83D1 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		04AD5CD11EBB0CF000BD83D1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		04AD5CD21EBB0CF000BD83D1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		04E087C81EC93C8F00D9E6E7 /* WithDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithDrawViewController.h; sourceTree = "<group>"; };
+		04E087C91EC93C8F00D9E6E7 /* WithDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithDrawViewController.m; sourceTree = "<group>"; };
+		04E087CA1EC93C8F00D9E6E7 /* WithDrawViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithDrawViewController.xib; sourceTree = "<group>"; };
 		04ED91381EC2C0B9009384FF /* BillDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillDataModel.h; sourceTree = "<group>"; };
 		04ED91391EC2C0B9009384FF /* BillDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillDataModel.m; sourceTree = "<group>"; };
 		140D099B88426C2C90854804 /* Pods-HuiDian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuiDian.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuiDian/Pods-HuiDian.release.xcconfig"; sourceTree = "<group>"; };
@@ -495,6 +564,7 @@
 				04AD5C5B1EBB0A7200BD83D1 /* PrefixHeader.pch */,
 				04AD5C5C1EBB0A7D00BD83D1 /* TTXMacro.h */,
 				045B010F1EB9C69F00107CC2 /* HuiDian.xcdatamodeld */,
+				047ABAD21EC99B0900A5DDB1 /* Home */,
 				04614A3F1EC1AD680056951B /* Mine */,
 				04AD5C1B1EBB087700BD83D1 /* Login */,
 				04AD5CC31EBB0B9D00BD83D1 /* ThirdAPI */,
@@ -534,6 +604,8 @@
 		04614A3F1EC1AD680056951B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				047ABAAE1EC9789800A5DDB1 /* Recommend */,
+				04E087C71EC93C7F00D9E6E7 /* WithDraw */,
 				042C6FC41EC444E20035A912 /* RealNameSet */,
 				042C6FBE1EC438C70035A912 /* Set */,
 				04614A4F1EC1BDAC0056951B /* WalletDynamic  */,
@@ -573,6 +645,59 @@
 				04ED91391EC2C0B9009384FF /* BillDataModel.m */,
 			);
 			path = "WalletDynamic ";
+			sourceTree = "<group>";
+		};
+		047ABAAE1EC9789800A5DDB1 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				047ABAAF1EC978E300A5DDB1 /* MyRecommendListViewController.h */,
+				047ABAB01EC978E300A5DDB1 /* MyRecommendListViewController.m */,
+				047ABAB11EC978E300A5DDB1 /* MyRecommendListViewController.xib */,
+				047ABAB41EC97AA800A5DDB1 /* MyrecommendTableViewCell.h */,
+				047ABAB51EC97AA800A5DDB1 /* MyrecommendTableViewCell.m */,
+				047ABAB61EC97AA800A5DDB1 /* MyrecommendTableViewCell.xib */,
+				047ABABE1EC984A900A5DDB1 /* MyRecommendDetailListViewController.h */,
+				047ABABF1EC984A900A5DDB1 /* MyRecommendDetailListViewController.m */,
+				047ABAC01EC984A900A5DDB1 /* MyRecommendDetailListViewController.xib */,
+				047ABAC31EC985ED00A5DDB1 /* RecommendConsumersView.h */,
+				047ABAC41EC985ED00A5DDB1 /* RecommendConsumersView.m */,
+				047ABAC61EC985F700A5DDB1 /* RecommendConsumersView.xib */,
+				047ABAC81EC9867500A5DDB1 /* RecommendMerchantView.h */,
+				047ABAC91EC9867500A5DDB1 /* RecommendMerchantView.m */,
+				047ABACB1EC9867F00A5DDB1 /* RecommendMerchantView.xib */,
+				047ABACD1EC9878500A5DDB1 /* RecommendDetailTableViewCell.h */,
+				047ABACE1EC9878500A5DDB1 /* RecommendDetailTableViewCell.m */,
+				047ABACF1EC9878500A5DDB1 /* RecommendDetailTableViewCell.xib */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		047ABAD21EC99B0900A5DDB1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				047ABAD31EC99B1E00A5DDB1 /* HomeViewController.h */,
+				047ABAD41EC99B1E00A5DDB1 /* HomeViewController.m */,
+				047ABAD61EC99BC000A5DDB1 /* HomeBannerTableViewCell.h */,
+				047ABAD71EC99BC000A5DDB1 /* HomeBannerTableViewCell.m */,
+				047ABAD81EC99BC000A5DDB1 /* HomeBannerTableViewCell.xib */,
+				0422F14E1EC9A04D0037CB3D /* HomeIndustryTableViewCell.h */,
+				0422F14F1EC9A04E0037CB3D /* HomeIndustryTableViewCell.m */,
+				0422F1501EC9A04E0037CB3D /* HomeIndustryTableViewCell.xib */,
+				0422F1531EC9A05B0037CB3D /* SquaredUpView.h */,
+				0422F1541EC9A05B0037CB3D /* SquaredUpView.m */,
+				0422F1561EC9A0670037CB3D /* CustomButton.h */,
+				0422F1571EC9A0670037CB3D /* CustomButton.m */,
+				0422F1591EC9A3750037CB3D /* MerchantTableViewCell.h */,
+				0422F15A1EC9A3750037CB3D /* MerchantTableViewCell.m */,
+				0422F15B1EC9A3750037CB3D /* MerchantTableViewCell.xib */,
+				0422F15E1EC9A3BE0037CB3D /* MerchantDataModel.h */,
+				0422F15F1EC9A3BE0037CB3D /* MerchantDataModel.m */,
+				0422F1681EC9AE560037CB3D /* HomeSortTableViewCell.h */,
+				0422F1691EC9AE560037CB3D /* HomeSortTableViewCell.m */,
+				0422F16A1EC9AE560037CB3D /* HomeSortTableViewCell.xib */,
+				0422F1611EC9ABCE0037CB3D /* Home.xcassets */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		04AD5C1B1EBB087700BD83D1 /* Login */ = {
@@ -682,6 +807,16 @@
 				04AD5CCF1EBB0BE800BD83D1 /* Colours.m */,
 			);
 			path = Colours;
+			sourceTree = "<group>";
+		};
+		04E087C71EC93C7F00D9E6E7 /* WithDraw */ = {
+			isa = PBXGroup;
+			children = (
+				04E087C81EC93C8F00D9E6E7 /* WithDrawViewController.h */,
+				04E087C91EC93C8F00D9E6E7 /* WithDrawViewController.m */,
+				04E087CA1EC93C8F00D9E6E7 /* WithDrawViewController.xib */,
+			);
+			path = WithDraw;
 			sourceTree = "<group>";
 		};
 		05CA9538D783F62D05F9A1EB /* Frameworks */ = {
@@ -810,6 +945,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047ABACC1EC9867F00A5DDB1 /* RecommendMerchantView.xib in Resources */,
 				04614A391EC164420056951B /* ForgetPasswordViewController.xib in Resources */,
 				04AD5C1D1EBB089600BD83D1 /* Login.storyboard in Resources */,
 				04614A6D1EC1C8D30056951B /* WalletView3.xib in Resources */,
@@ -817,6 +953,8 @@
 				040FED081EC55A6200CE0BC7 /* ShippingAlerTableViewCell.xib in Resources */,
 				04614A4C1EC1B4010056951B /* MineTableViewCell.xib in Resources */,
 				045B01161EB9C69F00107CC2 /* LaunchScreen.storyboard in Resources */,
+				047ABAD11EC9878500A5DDB1 /* RecommendDetailTableViewCell.xib in Resources */,
+				047ABAC21EC984A900A5DDB1 /* MyRecommendDetailListViewController.xib in Resources */,
 				045B01131EB9C69F00107CC2 /* Assets.xcassets in Resources */,
 				04AD5C731EBB0B3500BD83D1 /* BaseNavigationBar.xib in Resources */,
 				040FED0D1EC55B6100CE0BC7 /* ShippingALTableViewCell.xib in Resources */,
@@ -828,15 +966,24 @@
 				04614A4E1EC1B8080056951B /* Mine.xcassets in Resources */,
 				04AD5C521EBB0A1C00BD83D1 /* Public.xcassets in Resources */,
 				04AD5C4F1EBB0A1C00BD83D1 /* merchantHeader.jpg in Resources */,
+				047ABAB81EC97AA800A5DDB1 /* MyrecommendTableViewCell.xib in Resources */,
 				04AD5C511EBB0A1C00BD83D1 /* NothingView.xib in Resources */,
 				041C7CD61EBC16F90084D2D4 /* Base.xcassets in Resources */,
+				0422F1621EC9ABCE0037CB3D /* Home.xcassets in Resources */,
 				040FED221EC58B6C00CE0BC7 /* BankCardTableViewCell.xib in Resources */,
+				047ABAC71EC985F700A5DDB1 /* RecommendConsumersView.xib in Resources */,
 				042C6FC31EC438DA0035A912 /* SetViewController.xib in Resources */,
 				04614A5E1EC1C58B0056951B /* WalletDynammicTableViewCell.xib in Resources */,
+				0422F1521EC9A04E0037CB3D /* HomeIndustryTableViewCell.xib in Resources */,
+				0422F16C1EC9AE560037CB3D /* HomeSortTableViewCell.xib in Resources */,
 				040FED171EC5668500CE0BC7 /* city.plist in Resources */,
+				04E087CC1EC93C8F00D9E6E7 /* WithDrawViewController.xib in Resources */,
+				047ABADA1EC99BC000A5DDB1 /* HomeBannerTableViewCell.xib in Resources */,
+				047ABAB31EC978E300A5DDB1 /* MyRecommendListViewController.xib in Resources */,
 				040FED031EC559EB00CE0BC7 /* AdressListViewController.xib in Resources */,
 				04614A3E1EC1A2B60056951B /* RegisterViewController.xib in Resources */,
 				045B010E1EB9C69F00107CC2 /* Main.storyboard in Resources */,
+				0422F15D1EC9A3750037CB3D /* MerchantTableViewCell.xib in Resources */,
 				04AD5C481EBB0A1C00BD83D1 /* 213955937960616.cer in Resources */,
 				04614A681EC1C8720056951B /* WalletView2.xib in Resources */,
 				042C6FC91EC444F40035A912 /* RealNameSetViewController.xib in Resources */,
@@ -926,6 +1073,7 @@
 				04AD5C4C1EBB0A1C00BD83D1 /* HttpClientAlertViewHelper.m in Sources */,
 				040FED251EC5A3D500CE0BC7 /* BankPickView.m in Sources */,
 				045B010B1EB9C69F00107CC2 /* ViewController.m in Sources */,
+				0422F1601EC9A3BE0037CB3D /* MerchantDataModel.m in Sources */,
 				04614A531EC1BE0F0056951B /* WalletDynamicViewController.m in Sources */,
 				04AD5CD31EBB0CF000BD83D1 /* LoginViewController.m in Sources */,
 				042C6FC21EC438DA0035A912 /* SetViewController.m in Sources */,
@@ -940,16 +1088,23 @@
 				042C703D1EC452340035A912 /* LBXScanViewController.m in Sources */,
 				04614A3D1EC1A2B60056951B /* RegisterViewController.m in Sources */,
 				04AD5C541EBB0A1C00BD83D1 /* SortButtonSwitchView.m in Sources */,
+				047ABAD51EC99B1E00A5DDB1 /* HomeViewController.m in Sources */,
 				04614A571EC1C4930056951B /* WalletView1.m in Sources */,
 				040FED151EC5633600CE0BC7 /* PSCityPickerView.m in Sources */,
 				04AD5C581EBB0A1C00BD83D1 /* UIScrollView+NoDataSouce.m in Sources */,
+				0422F15C1EC9A3750037CB3D /* MerchantTableViewCell.m in Sources */,
+				047ABAC51EC985ED00A5DDB1 /* RecommendConsumersView.m in Sources */,
+				0422F1581EC9A0670037CB3D /* CustomButton.m in Sources */,
 				04AD5C531EBB0A1C00BD83D1 /* ShellCoinPageControlView.m in Sources */,
 				04AD5C551EBB0A1C00BD83D1 /* SwipeView.m in Sources */,
+				0422F1551EC9A05B0037CB3D /* SquaredUpView.m in Sources */,
 				04AD5C571EBB0A1C00BD83D1 /* UILabel+StringFrame.m in Sources */,
 				042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */,
 				04AD5C741EBB0B3500BD83D1 /* BaseTableViewCell.m in Sources */,
 				04614A621EC1C6E50056951B /* WalletDynamicOtherTableViewCell.m in Sources */,
+				047ABACA1EC9867500A5DDB1 /* RecommendMerchantView.m in Sources */,
 				040FED021EC559EB00CE0BC7 /* AdressListViewController.m in Sources */,
+				047ABAB21EC978E300A5DDB1 /* MyRecommendListViewController.m in Sources */,
 				045B01051EB9C69F00107CC2 /* main.m in Sources */,
 				04AD5CD01EBB0BE800BD83D1 /* Colours.m in Sources */,
 				042C6FBD1EC4053A0035A912 /* ZZCircleProgress.m in Sources */,
@@ -959,14 +1114,19 @@
 				042C703B1EC452340035A912 /* LBXScanResult.m in Sources */,
 				04614A4B1EC1B4010056951B /* MineTableViewCell.m in Sources */,
 				042C70411EC452340035A912 /* ZXingWrapper.m in Sources */,
+				04E087CB1EC93C8F00D9E6E7 /* WithDrawViewController.m in Sources */,
 				04AD5C4A1EBB0A1C00BD83D1 /* HttpClient.m in Sources */,
 				040FECFC1EC552E000CE0BC7 /* EditPasswordViewController.m in Sources */,
+				047ABAD91EC99BC000A5DDB1 /* HomeBannerTableViewCell.m in Sources */,
+				047ABAD01EC9878500A5DDB1 /* RecommendDetailTableViewCell.m in Sources */,
 				040FED071EC55A6200CE0BC7 /* ShippingAlerTableViewCell.m in Sources */,
+				0422F1511EC9A04E0037CB3D /* HomeIndustryTableViewCell.m in Sources */,
 				042C703A1EC452340035A912 /* LBXScanNetAnimation.m in Sources */,
 				04614A661EC1C8670056951B /* WalletView2.m in Sources */,
 				04AD5C491EBB0A1C00BD83D1 /* BaseHttpClient.m in Sources */,
 				04AD5C771EBB0B3500BD83D1 /* HDUserInfo.m in Sources */,
 				04AD5C711EBB0B3500BD83D1 /* BaseModel.m in Sources */,
+				047ABAB71EC97AA800A5DDB1 /* MyrecommendTableViewCell.m in Sources */,
 				040FED0C1EC55B6100CE0BC7 /* ShippingALTableViewCell.m in Sources */,
 				042C6FC81EC444F40035A912 /* RealNameSetViewController.m in Sources */,
 				04AD5C721EBB0B3500BD83D1 /* BaseNavigationBar.m in Sources */,
@@ -975,7 +1135,9 @@
 				042C70351EC452340035A912 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				04614A5D1EC1C58B0056951B /* WalletDynammicTableViewCell.m in Sources */,
 				04614A471EC1ADC10056951B /* MineViewController.m in Sources */,
+				0422F16B1EC9AE560037CB3D /* HomeSortTableViewCell.m in Sources */,
 				042C70401EC452340035A912 /* LBXZXCapture.m in Sources */,
+				047ABAC11EC984A900A5DDB1 /* MyRecommendDetailListViewController.m in Sources */,
 				042C703C1EC452340035A912 /* LBXScanView.m in Sources */,
 				04614A6B1EC1C8C80056951B /* WalletView3.m in Sources */,
 				04614A381EC164420056951B /* ForgetPasswordViewController.m in Sources */,
@@ -1148,7 +1310,7 @@
 					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDianForComsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1176,7 +1338,7 @@
 					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/UMessage_Sdk_1.2.3",
 					"$(PROJECT_DIR)/HuiDian/ThirdAPI/ThirdAPI/share/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDianForComsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -63,7 +63,7 @@
         <!--商家-->
         <scene sceneID="Vru-kB-DnA">
             <objects>
-                <viewController id="e9l-Bt-Iwl" sceneMemberID="viewController">
+                <viewController id="e9l-Bt-Iwl" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sqa-62-w2i"/>
                         <viewControllerLayoutGuide type="bottom" id="LMF-Bv-YzA"/>
@@ -71,13 +71,32 @@
                     <view key="view" contentMode="scaleToFill" id="z8d-8A-LOh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XAL-We-JzC">
+                                <rect key="frame" x="0.0" y="-20" width="375" height="638"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e9l-Bt-Iwl" id="OPc-G7-ihB"/>
+                                    <outlet property="delegate" destination="e9l-Bt-Iwl" id="FGt-Cw-9zZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XAL-We-JzC" secondAttribute="trailing" id="RT7-99-a5V"/>
+                            <constraint firstItem="XAL-We-JzC" firstAttribute="leading" secondItem="z8d-8A-LOh" secondAttribute="leading" id="SsY-T6-Mlo"/>
+                            <constraint firstItem="LMF-Bv-YzA" firstAttribute="top" secondItem="XAL-We-JzC" secondAttribute="bottom" id="Xz7-6c-N5a"/>
+                            <constraint firstItem="XAL-We-JzC" firstAttribute="top" secondItem="z8d-8A-LOh" secondAttribute="top" constant="-20" id="b3B-5Z-5Aj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="商家" image="icon_shop" selectedImage="icon_shop" id="87G-4F-Gc8"/>
+                    <connections>
+                        <outlet property="tableView" destination="XAL-We-JzC" id="hu2-cY-esf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug7-ou-7ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="-471"/>
+            <point key="canvasLocation" x="-1057" y="-575"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="33N-Lr-V67">
@@ -96,7 +115,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdA-u7-VfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1508" y="-143"/>
+            <point key="canvasLocation" x="-1679" y="-195"/>
         </scene>
     </scenes>
     <resources>

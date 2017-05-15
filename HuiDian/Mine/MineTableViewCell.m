@@ -12,6 +12,9 @@
 #import <QiniuSDK.h>
 #import "LBXScanWrapper.h"
 #import "LBXAlertAction.h"
+#import "WithDrawViewController.h"
+#import "RealNameSetViewController.h"
+#import "BankCardManageViewController.h"
 
 @interface MineTableViewCell()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -44,6 +47,7 @@
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
     self.headImageView.layer.cornerRadius = (TWitdh*(128/375.) -30)/2.;
     self.headImageView.layer.masksToBounds = YES;
+    self.nameLabel.text = [HDUserInfo shareUserInfos].idcardName;
     
     self.xiaofeiView.backgroundColor = MacoYellowColor;
     
@@ -108,7 +112,7 @@
         if (IsRequestTrue) {
             
             [[HDUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
-            
+            self.nameLabel.text = [HDUserInfo shareUserInfos].idcardName;
             self.totalconsumptionAmount.text = [NSString stringWithFormat:@"总消费金额¥%.2f",[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
             self.waitFeedbackAmount.text = [NSString stringWithFormat:@"¥%.2f",[[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
             self.xiaofeiLabel.text = [NSString stringWithFormat:@"消费抵用金%.2f元",[[HDUserInfo shareUserInfos].consumeBalance doubleValue]];
@@ -125,8 +129,16 @@
 
 }
 - (IBAction)withDrawBtn:(UIButton *)sender {
-    
-    
+    //首先判断用户时候已经实名认证
+    if ([self gotRealNameRu:@"在您申请提现之前,请先进行实名认证"]){
+        return;
+    }
+    //再判断是否绑定银行卡
+    if (![HDUserInfo shareUserInfos].bindingFlag) {
+        [self goBingdingBank:@"您还未绑定银行卡，请先绑定银行卡"];
+    }
+    WithDrawViewController *withDrawVC = [[WithDrawViewController alloc]init];
+    [self.viewController.navigationController pushViewController:withDrawVC animated:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -160,6 +172,50 @@
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"从手机选择",@"拍照", nil];
     [sheet showInView:self.viewController.view];
 }
+
+
+#pragma mark - 去进行实名认证
+- (BOOL)gotRealNameRu:(NSString *)alerTitle
+{
+    if (![HDUserInfo shareUserInfos].identityFlag) {
+        UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:alerTitle preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        }];
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去认证" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            //去进行实名认证
+            RealNameSetViewController *realNameVC = [[RealNameSetViewController alloc]init];
+            realNameVC.isYetAut = NO;
+            [self.viewController.navigationController pushViewController:realNameVC animated:YES];
+        }];
+        [alertcontroller addAction:cancelAction];
+        [alertcontroller addAction:otherAction];
+        [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+        return YES;
+    }
+    return NO;
+}
+
+
+
+#pragma mark - 去绑定银行卡
+- (void)goBingdingBank:(NSString *)alerTitle
+{
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle:@"重要提示" message:alerTitle preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"去绑定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //去绑定银行卡
+        BankCardManageViewController *bankcardVC = [[BankCardManageViewController alloc]init];
+        bankcardVC.isYetRealnameAuthentication = YES;
+        bankcardVC.realnameAuDic = @{@"name":[HDUserInfo shareUserInfos].idcardName,
+                                     @"idcardnumber":[HDUserInfo shareUserInfos].idcard};
+        [self.viewController.navigationController pushViewController:bankcardVC animated:YES];
+    }];
+    [alertcontroller addAction:cancelAction];
+    [alertcontroller addAction:otherAction];
+    [self.viewController presentViewController:alertcontroller animated:YES completion:NULL];
+}
+
 
 #pragma mark - UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -237,10 +293,8 @@
     __weak __typeof(self) weakSelf = self;
     
     [HttpClient POST:@"user/getQiniuToken" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
-        
         NSString *qiniuToken = jsonObject[@"data"];
-        
-        [weakSelf upLoadImage:image withToken:qiniuToken];
+        [self upLoadImage:image withToken:qiniuToken];
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         

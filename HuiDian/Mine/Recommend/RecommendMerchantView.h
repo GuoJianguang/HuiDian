@@ -1,17 +1,14 @@
 //
-//  MineViewController.h
+//  RecommendMerchantView.h
 //  HuiDian
 //
-//  Created by mac on 2017/5/9.
+//  Created by mac on 2017/5/15.
 //  Copyright © 2017年 Huidian. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface MineViewController : BaseViewController
-
-
-
+@interface RecommendMerchantView : UIView
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+- (void)reload;
 @end

@@ -23,7 +23,10 @@
 微信支付的key
  */
 #define WXApiKey @"wx0032c653b99c31f1"
-
+/**
+ 高德appstore的key
+ */
+#define MAP_APPKEY_APPSTORE @"61ee8210243db6b5e2765d8bb756d59f"
 //密码md5加密key
 #define PasswordKey @"PW2017$HD"
 //#define PasswordKey @"PW2017$LY"

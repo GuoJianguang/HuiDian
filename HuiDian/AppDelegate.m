@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @interface AppDelegate ()
 
 @end
@@ -17,7 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self SetTheThirdParty:launchOptions];
+
     return YES;
+}
+#pragma mark - 设置一些第三方库的key
+- (void)SetTheThirdParty:(NSDictionary*)launchOptions{
+    //高德地图
+    [[AMapServices sharedServices] setEnableHTTPS:YES];
+    [AMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
+
 }
 
 
