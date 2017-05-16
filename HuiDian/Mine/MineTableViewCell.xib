@@ -97,7 +97,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHN-da-YVf">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHN-da-YVf">
                                 <rect key="frame" x="388" y="7" width="90" height="30"/>
                                 <color key="backgroundColor" red="0.79019606113433838" green="0.19106508791446686" blue="0.47459349036216736" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -128,7 +128,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1_white" translatesAutoresizingMaskIntoConstraints="NO" id="Ft2-si-rEG">
                                 <rect key="frame" x="0.0" y="0.0" width="493" height="452"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cji-Yf-4Z1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cji-Yf-4Z1" customClass="RoundView">
                                 <rect key="frame" x="0.0" y="30" width="493" height="392"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待回馈金额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq7-jH-M6G">

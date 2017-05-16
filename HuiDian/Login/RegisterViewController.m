@@ -56,6 +56,9 @@
     UITapGestureRecognizer *ges = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(protocolGes)];
     [self.protocelLabel addGestureRecognizer:ges];
     
+    if (TWitdh == 320) {
+        self.rgiht.constant = self.left.constant = 38;
+    }
 }
 
 - (void)protocolGes

@@ -10,7 +10,7 @@
 #import "SquaredUpView.h"
 #import "CustomButton.h"
 #import <SDWebImage/UIButton+WebCache.h>
-//#import "MerchantSearchResultViewController.h"
+#import "MerchantListViewController.h"
 
 
 @implementation NewHomeActivityModel
@@ -66,16 +66,17 @@
         [button setTitle:model.name forState:UIControlStateNormal];
         [button sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"icon_list_default"]];
     }];
+
 }
 
 - (void)jSquaredUpViewCell:(CustomButton *)cell didSelectedAtIndex:(NSInteger)index
 {
-//    NewHomeActivityModel *model = self.sortDataSouceArray[cell.tag];
-//    MerchantSearchResultViewController *resultVC = [[MerchantSearchResultViewController alloc]init];
-//    resultVC.currentIndustry = model.name;
-//    resultVC.keyWord = @"";
-//    resultVC.currentCity = [TTXUserInfo shareUserInfos].locationCity;
-//    [self.viewController.navigationController pushViewController:resultVC animated:YES];
+    NewHomeActivityModel *model = self.sortDataSouceArray[cell.tag];
+    MerchantListViewController *resultVC = [[MerchantListViewController alloc]init];
+    resultVC.currentIndustry = model.name;
+    resultVC.keyWord = @"";
+    resultVC.currentCity = [HDUserInfo shareUserInfos].locationCity;
+    [self.viewController.navigationController pushViewController:resultVC animated:YES];
 }
 
 

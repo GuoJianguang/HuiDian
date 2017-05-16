@@ -13,13 +13,20 @@
 #import "MerchantDataModel.h"
 #import "MerchantTableViewCell.h"
 #import "HomeSortTableViewCell.h"
+#import "MerchantDetailViewController.h"
+#import "CityListViewController.h"
+#import "MerchantSearchViewController.h"
+#import "MerchantSearchResultViewController.h"
+#import "MineViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,CityListViewDelegate,MerchantSearchViewDelegate,UITabBarControllerDelegate>
 @property (nonatomic, assign)BOOL isAlreadyRefrefsh;
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;;
 @property (nonatomic, assign)NSInteger page;
 
+@property (nonatomic, strong)NSString *locationCity;
 
+@property (nonatomic, strong)MerchantSearchViewController *searchVC;
 
 //当前城市
 @property (nonatomic, strong)NSString *currentCity;
@@ -33,6 +40,10 @@
     // Do any additional setup after loading the view.
     self.tableView.backgroundColor = [UIColor clearColor];
     __weak HomeViewController *weak_self = self;
+    self.tabBarController.delegate = self;
+    self.searchView.layer.cornerRadius = 18;
+    self.searchView.layer.masksToBounds = YES;
+    self.searchTF.delegate = self;
     self.sortWay = @"1";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.isAlreadyRefrefsh = YES;
@@ -43,9 +54,33 @@
         [self detailReqest:NO andCity:self.currentCity andsortingWay:self.sortWay];
     }];
     [self.tableView noDataSouce];
-    
+    self.locationCity = @"成都";
+
     [self loadDataUseLocation];
 
+    UIColor *itemSelectTintColor = MacoTitleColor;
+    [[UITabBar appearance] setBarTintColor:MacoYellowColor];
+    [[UITabBarItem appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      itemSelectTintColor,
+      NSForegroundColorAttributeName,
+      [UIFont boldSystemFontOfSize:15],
+      NSFontAttributeName
+      ,nil] forState:UIControlStateSelected];
+    self.tabBarController.tabBar.tintColor = itemSelectTintColor;
+    [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
+    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:itemSelectTintColor frame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 1)]];
+    
+}
+#pragma mark -懒加载
+- (MerchantSearchViewController *)searchVC
+{
+    if (!_searchVC) {
+        _searchVC = [[MerchantSearchViewController alloc]init];
+        _searchVC.delegate = self;
+        _searchVC.view.frame = CGRectMake(0, 0, TWitdh, THeight);
+    }
+    return _searchVC;
 }
 
 - (NSMutableArray *)dataSouceArray
@@ -74,22 +109,22 @@
                     city =  [city stringByReplacingOccurrencesOfString:@"市" withString:@""];
                 }
                 [HDUserInfo shareUserInfos].locationCity = city;
-//                [weak_self.cityBtn setTitle:city forState:UIControlStateNormal];
+                [weak_self.cityBtn setTitle:city forState:UIControlStateNormal];
                 self.currentCity = city;
-//                self.locationCity = city;
+                self.locationCity = city;
                 
                 [self.tableView.mj_header beginRefreshing];
             }else{
                 self.currentCity = @"成都";
                 [HDUserInfo shareUserInfos].locationCity = @"成都";
-//                [weak_self.cityBtn setTitle:@"成都" forState:UIControlStateNormal];
+                [weak_self.cityBtn setTitle:@"成都" forState:UIControlStateNormal];
                 [self.tableView.mj_header beginRefreshing];
             }
         };
     }else {
         self.currentCity = @"成都";
         [HDUserInfo shareUserInfos].locationCity = @"成都";
-//        [weak_self.cityBtn setTitle:@"成都" forState:UIControlStateNormal];
+        [weak_self.cityBtn setTitle:@"成都" forState:UIControlStateNormal];
         [self.tableView.mj_header beginRefreshing];
     }
 }
@@ -153,8 +188,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (self.dataSouceArray.count == 0) {
+        return 2;
+    }
     return self.dataSouceArray.count + 3;
     //    return 3;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
+    MerchantDataModel *model = self.dataSouceArray[indexPath.row -3];
+    merchantDVC.merchantCode = model.code;
+    [self.navigationController pushViewController:merchantDVC animated:YES];
 }
 #pragma mark - 获取商家列表
 - (void)detailReqest:(BOOL)isHeader andCity:(NSString *)city andsortingWay:(NSString *)sortingWay
@@ -170,7 +216,7 @@
                             @"latitude":@([HDUserInfo shareUserInfos].locationCoordinate.latitude),
                             @"seqId":NullToNumber(sortingWay)};
     
-    [HttpClient GET:@"mch/highQuality" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient GET:@"mch/search" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
         self.tableView.scrollEnabled = YES;
         if (IsRequestTrue) {
             if (isHeader) {
@@ -186,6 +232,7 @@
             for (NSDictionary *dic in array) {
                 [self.dataSouceArray addObject:[MerchantDataModel modelWithDic:dic]];
             }
+            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray andBannerArray:@[@"1"]];
             [self.tableView reloadData];
         }
         
@@ -202,20 +249,103 @@
 }
 
 
+#pragma mark - 选取定位
+
+- (IBAction)cityBtn:(UIButton *)sender
+{
+    CityListViewController *cityListView = [[CityListViewController alloc]init];
+    cityListView.delegate = self;
+    //热门城市列表
+    cityListView.arrayHotCity = [NSMutableArray arrayWithObjects:@"成都",@"重庆",@"昆明",@"德阳",@"资阳", nil];
+    //历史选择城市列表
+    NSMutableArray *historicalCity = [[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity];
+    cityListView.arrayHistoricalCity = historicalCity;
+    //定位城市列表
+    cityListView.arrayLocatingCity   = [NSMutableArray arrayWithObjects:self.locationCity,nil];
+    
+    [self presentViewController:cityListView animated:YES completion:nil];
+}
+
+- (void)didClickedWithCityName:(NSString*)cityName
+{
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity]) {
+        NSArray *historicalCity = [[NSUserDefaults standardUserDefaults]objectForKey:CommonlyUsedCity];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:historicalCity];
+        
+        if (![array containsObject:cityName]) {
+            [array insertObject:cityName atIndex:0];
+            if (array.count > 3) {
+                [array removeLastObject];
+            }
+        }else{
+            [array exchangeObjectAtIndex:[array indexOfObject:cityName] withObjectAtIndex:0];
+        }
+        [[NSUserDefaults standardUserDefaults]setObject:array forKey:CommonlyUsedCity];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+    }else{
+        NSMutableArray *array = [NSMutableArray arrayWithArray:@[cityName]];
+        [[NSUserDefaults standardUserDefaults]setObject:array forKey:CommonlyUsedCity];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+    }
+    self.searchVC.selectCityname = cityName;
+    [HDUserInfo shareUserInfos].locationCity = cityName;
+    self.currentCity = cityName;
+    [self.cityBtn setTitle:cityName forState:UIControlStateNormal];
+    [self.tableView.mj_header beginRefreshing];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITabBarDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    if([viewController isMemberOfClass:[MineViewController class]]){
+        if (![HDUserInfo shareUserInfos].currentLogined) {
+            //判断是否先登录
+            UINavigationController *navc = [LoginViewController controller];
+            [self presentViewController:navc animated:YES completion:NULL];
+            return NO;
+        }
+    }
+    return YES;
 }
-*/
 
+- (IBAction)searchBtn:(UIButton *)sender {
+    
+    self.searchVC.isSerach = YES;
+    //    [self.navigationController pushViewController:self.searchVC animated:YES];
+    [self.navigationController.view addSubview:self.searchVC.view];
+}
+
+#pragma mark - UITextFiledDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    self.searchVC.isSerach = YES;
+    //    [self.navigationController pushViewController:self.searchVC animated:YES];
+    self.searchVC.selectCityname = self.currentCity;
+    [self.navigationController.view addSubview:self.searchVC.view];
+    return NO;
+}
+
+#pragma mark = MerchantSearchViewDelegate
+
+- (void)cancelSearch
+{
+    [self.searchVC.view removeFromSuperview];
+}
+
+- (void)sureSearch:(NSString *)keyWord city:(NSString *)cityName
+{
+    [self.searchVC.view removeFromSuperview];
+    MerchantSearchResultViewController *resultVC = [[MerchantSearchResultViewController alloc]init];
+    resultVC.currentIndustry = @"";
+    resultVC.keyWord = keyWord;
+    resultVC.currentCity = cityName;
+    [self.navigationController pushViewController:resultVC animated:YES];
+}
 @end

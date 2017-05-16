@@ -7,16 +7,7 @@
 //
 
 #import "HomeBannerTableViewCell.h"
-//#import "MerchantListViewController.h"
-//#import "GoodsListViewController.h"
-//#import "HomeViewController.h"
-//#import "GoodsDetailNewViewController.h"
-//#import "MerchantSearchResultViewController.h"
-//#import "SortCollectionViewCell.h"
-//#import "GoodsSearchRsultViewController.h"
-//#import "OnLineMerchantCityViewController.h"
-//#import "NewIndustryCollectionViewCell.h"
-//#import "NewMerchantDetailViewController.h"
+#import "MerchantDetailViewController.h"
 
 @interface HomeBannerTableViewCell()<SwipeViewDelegate,SwipeViewDataSource>
 
@@ -161,9 +152,9 @@
     switch ([model.jumpWay integerValue]) {
         case 1://跳转app商户详情
         {
-//            NewMerchantDetailViewController *merchantDVC = [[NewMerchantDetailViewController alloc]init];
-//            merchantDVC.merchantCode = model.jumpValue;
-//            [self.viewController.navigationController pushViewController:merchantDVC animated:YES];
+            MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
+            merchantDVC.merchantCode = model.jumpValue;
+            [self.viewController.navigationController pushViewController:merchantDVC animated:YES];
             
         }
             break;

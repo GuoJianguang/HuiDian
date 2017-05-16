@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self SetTheThirdParty:launchOptions];
+    [HDUserInfo shareUserInfos].token = @"";
 
     return YES;
 }

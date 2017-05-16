@@ -36,5 +36,7 @@
 - (IBAction)getGraphBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *codeBtn;
 - (IBAction)codeBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *right;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *left;
 
 @end

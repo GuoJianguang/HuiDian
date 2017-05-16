@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HXF-sl-Zts">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Avt-Yc-4uq">
             <objects>
-                <navigationController navigationBarHidden="YES" id="HXF-sl-Zts" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="Login" storyboardIdentifier="Login" navigationBarHidden="YES" id="HXF-sl-Zts" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eFy-6F-1FL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -40,16 +40,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="FED-fx-tC9">
-                                <rect key="frame" x="132" y="104" width="110" height="110"/>
+                                <rect key="frame" x="132" y="94" width="110" height="110"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_huidian" translatesAutoresizingMaskIntoConstraints="NO" id="Vhe-fF-R1f">
-                                <rect key="frame" x="155" y="224" width="65" height="32"/>
+                                <rect key="frame" x="155" y="214" width="65" height="32"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_slogen" translatesAutoresizingMaskIntoConstraints="NO" id="4gB-HP-DzD">
                                 <rect key="frame" x="62.5" y="597" width="249" height="50"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1R-Kb-aoj">
-                                <rect key="frame" x="0.0" y="256" width="375" height="341"/>
+                                <rect key="frame" x="0.0" y="246" width="375" height="351"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvV-ev-AR9">
                                         <rect key="frame" x="50" y="50" width="275" height="56"/>
@@ -138,10 +138,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="389-7J-FbO">
-                                        <rect key="frame" x="50" y="261" width="275" height="44"/>
+                                        <rect key="frame" x="50" y="275" width="275" height="40"/>
                                         <color key="backgroundColor" red="0.98493456840000004" green="0.96125960349999995" blue="0.31749290229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="COm-CM-gxm"/>
+                                            <constraint firstAttribute="height" constant="40" id="COm-CM-gxm"/>
                                         </constraints>
                                         <state key="normal" title="登录">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,7 +178,7 @@
                             <constraint firstItem="4gB-HP-DzD" firstAttribute="top" secondItem="l1R-Kb-aoj" secondAttribute="bottom" id="KpA-GS-8Gp"/>
                             <constraint firstItem="FED-fx-tC9" firstAttribute="centerX" secondItem="690-Q0-Y7n" secondAttribute="centerX" id="XXW-Di-8dH"/>
                             <constraint firstItem="Vhe-fF-R1f" firstAttribute="centerX" secondItem="690-Q0-Y7n" secondAttribute="centerX" id="ZIN-cj-LNr"/>
-                            <constraint firstItem="FED-fx-tC9" firstAttribute="top" secondItem="yaV-1Z-S60" secondAttribute="bottom" constant="84" id="hQh-1A-dZh"/>
+                            <constraint firstItem="FED-fx-tC9" firstAttribute="top" secondItem="yaV-1Z-S60" secondAttribute="bottom" constant="74" id="hQh-1A-dZh"/>
                             <constraint firstItem="4gB-HP-DzD" firstAttribute="centerX" secondItem="690-Q0-Y7n" secondAttribute="centerX" id="knd-2l-bem"/>
                             <constraint firstItem="l1R-Kb-aoj" firstAttribute="top" secondItem="Vhe-fF-R1f" secondAttribute="bottom" id="nwV-hn-Bjq"/>
                             <constraint firstAttribute="trailing" secondItem="l1R-Kb-aoj" secondAttribute="trailing" id="od2-8J-gAc"/>
@@ -188,8 +188,10 @@
                     <connections>
                         <outlet property="forgetBtn" destination="7aR-dU-HBF" id="0lh-Dq-YQh"/>
                         <outlet property="loginBtn" destination="389-7J-FbO" id="6zq-XC-sbK"/>
+                        <outlet property="loginBtnHeight" destination="COm-CM-gxm" id="iO8-qC-vtJ"/>
                         <outlet property="passwordTF" destination="o8a-5f-oZQ" id="UmM-9I-3yT"/>
                         <outlet property="registerBtn" destination="xvh-lX-kHS" id="aDu-kU-aSe"/>
+                        <outlet property="topHeight" destination="8ry-Ny-9qH" id="r3Y-Jo-ulZ"/>
                         <outlet property="userTF" destination="OYU-pa-YwP" id="32Z-bL-fnV"/>
                     </connections>
                 </viewController>

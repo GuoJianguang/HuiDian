@@ -33,6 +33,7 @@
     [self.phoneCodeTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
     [self.surePasswordTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
     
+    self.grapCodeTF.adjustsFontSizeToFitWidth = self.phoneCodeTF.adjustsFontSizeToFitWidth = YES;
     self.passwordTF.textColor = self.phoneTF.textColor = self.grapCodeTF.textColor = self.phoneCodeTF.textColor = self.surePasswordTF.textColor = MacoTitleColor;
     
     self.sureBtn.backgroundColor = MacoBlueColor;
@@ -50,6 +51,10 @@
     
     self.phoneTF.delegate = self;
     timeLefted = 60;
+    
+    if (TWitdh == 320) {
+        self.left.constant = self.right.constant = 38;
+    }
 
 }
 

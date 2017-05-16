@@ -20,6 +20,8 @@
 - (IBAction)forgetBtn:(UIButton *)sender;
 
 + (UINavigationController *)controller;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginBtnHeight;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
 
 @end

@@ -13,4 +13,14 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, copy)NSString *sortWay;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *cityBtn;
+- (IBAction)cityBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
+@property (weak, nonatomic) IBOutlet UITextField *searchTF;
+
+@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
+- (IBAction)searchBtn:(UIButton *)sender;
+
 @end

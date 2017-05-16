@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZZCircleProgress.h"
+#import "RoundView.h"
 
 @interface MineTableViewCell : BaseTableViewCell
 
@@ -33,7 +34,7 @@
 @property (strong, nonatomic) ZZCircleProgress *amountProgressView;
 @property (strong, nonatomic) ZZCircleProgress *lainAmountProgressView;
 
-@property (weak, nonatomic) IBOutlet UIView *progressSuperView;
+@property (weak, nonatomic) IBOutlet RoundView *progressSuperView;
 
 @property (weak, nonatomic) IBOutlet UIView *xiaofeiView;
 

@@ -37,6 +37,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *codeBtn;
 - (IBAction)codeBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *protocelLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rgiht;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *left;
 
 @end

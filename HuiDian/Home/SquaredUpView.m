@@ -53,7 +53,7 @@
         button.titleLabel.adjustsFontSizeToFitWidth = YES;
         button.tag = idx;
         button.titleLabel.font = [UIFont systemFontOfSize:13];
-        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [button setTitleColor:MacoTitleColor forState:UIControlStateNormal];
         [button addTarget:self.squaredUpViewDelegate action:@selector(jSquaredUpViewCell:didSelectedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
         
     }];

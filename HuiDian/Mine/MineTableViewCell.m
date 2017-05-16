@@ -96,10 +96,11 @@
     }
     return _amountProgressView;
 }
+
 - (ZZCircleProgress *)lainAmountProgressView
 {
     if (!_lainAmountProgressView) {
-        _lainAmountProgressView = [[ZZCircleProgress alloc] initWithFrame:CGRectMake(90, 21, TWitdh - 180, TWitdh - 180) pathBackColor:MacoTitleColor pathFillColor:MacoTitleColor startAngle:180 strokeWidth:5];
+//        _lainAmountProgressView = [[ZZCircleProgress alloc] initWithFrame:CGRectMake(90, 21, TWitdh - 180, TWitdh - 180) pathBackColor:MacoTitleColor pathFillColor:MacoTitleColor startAngle:180 strokeWidth:5];
     }
     return _lainAmountProgressView;
 }
@@ -118,7 +119,8 @@
             self.xiaofeiLabel.text = [NSString stringWithFormat:@"消费抵用金%.2f元",[[HDUserInfo shareUserInfos].consumeBalance doubleValue]];
             self.yuELabel.text = [NSString stringWithFormat:@"%.2f",[[HDUserInfo shareUserInfos].aviableBalance doubleValue]];
             
-            self.amountProgressView.progress = ([[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]) /[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue];
+//            self.amountProgressView.progress = ([[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]) /[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue];
+            self.amountProgressView.progress = 0.8;
 
             
             [HDUserInfo shareUserInfos].token = token;

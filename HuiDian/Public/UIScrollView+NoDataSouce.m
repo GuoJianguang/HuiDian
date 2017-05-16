@@ -117,14 +117,22 @@
     if (dataSouceArray.count == 0&&bannerArray.count == 0) {
         [self showNoDataSouce];
     }else if(bannerArray.count != 0 && dataSouceArray.count ==0){
+        
+        CGFloat intervalX = 50.0;/**<横向间隔*/
+        CGFloat intervalY = 15.0;/**<纵向间隔*/
+        NSInteger columnNum = 4;/**<九宫格列数*/
+        CGFloat widthAndHeightRatio = 2.0/3.0;/**<宽高比*/
+        CGFloat buttonWidth = (TWitdh - 40 - intervalX * (columnNum - 1))/(CGFloat)columnNum;/**<button的宽度*/
+        CGFloat buttonHeight = buttonWidth/widthAndHeightRatio;/**<button的高度*/
+        ;
         [[self viewWithTag:100] removeFromSuperview];
         UIView *view  = [[UIView alloc]init];
         view.tag = 100;
-        view.backgroundColor = MacoGrayColor;
+        view.backgroundColor = [UIColor whiteColor];;
         [self addSubview:view];
-        view.frame = CGRectMake(0, TWitdh*(210./400.) + 60, TWitdh, self.bounds.size.height - TWitdh*(210./400.) - 60);
+        view.frame = CGRectMake(0, TWitdh*(35/75.) + buttonHeight * 2 + intervalY*2 + 18, TWitdh, self.bounds.size.height - (TWitdh*(35/75.) + buttonHeight * 2 + intervalY*2 + 18));
         UIImageView *imageView = [[UIImageView alloc]init];
-        imageView.image = [UIImage imageNamed:@"pic_1"];
+        imageView.image = [UIImage imageNamed:@"pic_4"];
         [view addSubview:imageView];
         if (THeight == 480) {
             imageView.bounds = CGRectMake(0, 0, TWitdh/7, TWitdh/7*(20/23.));
@@ -135,12 +143,17 @@
         imageView.center = CGPointMake(view.bounds.size.width/2, view.bounds.size.height/2 - 10);
         
         UILabel *label = [[UILabel alloc]init];
-        label.text = @"抱歉，没有搜索到相关结果";
+        label.text = @"没有数据";
         [view addSubview:label];
         label.font = [UIFont systemFontOfSize:15];
         label.frame = CGRectMake(20, imageView.frame.origin.y + imageView.bounds.size.height, TWitdh - 40, 28);
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor grayColor];
+        
+        UIView *lineView  =[[UIView alloc]initWithFrame:CGRectMake(0, 0, TWitdh, 1)];
+        [view addSubview:lineView];
+        lineView.backgroundColor = MacolayerColor;
+        
     }
     else{
         [self hiddenNoDataSouce];

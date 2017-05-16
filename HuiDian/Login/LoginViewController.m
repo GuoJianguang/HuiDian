@@ -26,6 +26,12 @@
     [self.passwordTF setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
 
     self.loginBtn.layer.cornerRadius = 20;
+    if (TWitdh == 320) {
+        self.loginBtnHeight.constant = 36;
+        self.loginBtn.layer.cornerRadius = 18;;
+        self.topHeight.constant = 25;
+
+    }
     self.loginBtn.layer.masksToBounds = YES;
     
     self.naviBar.delegate = self;
@@ -62,9 +68,7 @@
                 [HDUserInfo shareUserInfos].currentLogined = YES;
                 [[HDUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
                 //统计新增用户
-                UINavigationController *homeVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Main"];
-                [self presentViewController:homeVC animated:YES completion:NULL];
-//                [self dismissViewControllerAnimated:YES completion:NULL];
+                [self dismissViewControllerAnimated:YES completion:NULL];
             }
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             [SVProgressHUD dismiss];

@@ -17,6 +17,7 @@
     self.contentView.backgroundColor = [UIColor colorFromHexString:@"#e6e6e6"];
     [self.allBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
     [self.distanceBtn setTitleColor:MacoTitleColor forState:UIControlStateNormal];
+    self.allView.backgroundColor = self.distacneView.backgroundColor = MacoTitleColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
