@@ -15,6 +15,7 @@
 #import "WithDrawViewController.h"
 #import "RealNameSetViewController.h"
 #import "BankCardManageViewController.h"
+#import "MineViewController.h"
 
 @interface MineTableViewCell()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -44,9 +45,9 @@
     
     self.xiaofeiLabel.text = [NSString stringWithFormat:@"消费抵用金%.2f元",[[HDUserInfo shareUserInfos].consumeBalance doubleValue]];
     self.yuELabel.text = [NSString stringWithFormat:@"%.2f",[[HDUserInfo shareUserInfos].aviableBalance doubleValue]];
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
     self.headImageView.layer.cornerRadius = (TWitdh*(128/375.) -30)/2.;
     self.headImageView.layer.masksToBounds = YES;
+    self.headImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.nameLabel.text = [HDUserInfo shareUserInfos].idcardName;
     
     self.xiaofeiView.backgroundColor = MacoYellowColor;
@@ -79,7 +80,7 @@
 - (UILabel *)waitFeedbackAmount
 {
     if (!_waitFeedbackAmount) {
-        _waitFeedbackAmount = [[UILabel alloc]init];
+//        _waitFeedbackAmount = [[UILabel alloc]init];
         _waitFeedbackAmount.adjustsFontSizeToFitWidth = YES;
         _waitFeedbackAmount.font = [UIFont systemFontOfSize:28];
         _waitFeedbackAmount.textColor = [UIColor colorFromHexString:@"#dd137b"];
@@ -92,7 +93,7 @@
 - (ZZCircleProgress *)amountProgressView
 {
     if (!_amountProgressView) {
-        _amountProgressView = [[ZZCircleProgress alloc] initWithFrame:CGRectMake(70, 0, TWitdh - 140, TWitdh - 140) pathBackColor:MacoTitleColor pathFillColor:[UIColor colorFromHexString:@"#dd137b"] startAngle:180 strokeWidth:13];
+//        _amountProgressView = [[ZZCircleProgress alloc] initWithFrame:CGRectMake(70, 0, TWitdh - 140, TWitdh - 140) pathBackColor:MacoTitleColor pathFillColor:[UIColor colorFromHexString:@"#dd137b"] startAngle:180 strokeWidth:13];
     }
     return _amountProgressView;
 }
@@ -113,16 +114,29 @@
         if (IsRequestTrue) {
             
             [[HDUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
+            [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
+
             self.nameLabel.text = [HDUserInfo shareUserInfos].idcardName;
             self.totalconsumptionAmount.text = [NSString stringWithFormat:@"总消费金额¥%.2f",[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue]];
             self.waitFeedbackAmount.text = [NSString stringWithFormat:@"¥%.2f",[[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]];
             self.xiaofeiLabel.text = [NSString stringWithFormat:@"消费抵用金%.2f元",[[HDUserInfo shareUserInfos].consumeBalance doubleValue]];
             self.yuELabel.text = [NSString stringWithFormat:@"%.2f",[[HDUserInfo shareUserInfos].aviableBalance doubleValue]];
-            
-//            self.amountProgressView.progress = ([[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]) /[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue];
-            self.amountProgressView.progress = 0.8;
+            if (([[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]) /([[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue]) >=1 ) {
+                self.progressSuperView.proess = 0.98;
 
-            
+            }else if (([[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue])/([[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue]) ==0){
+                self.progressSuperView.proess = 0.02;
+            }else if (([[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue]) ==0){
+                self.progressSuperView.proess = 0.02;
+            }else {
+                self.progressSuperView.proess = ([[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue]) /[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue];
+
+            }
+            self.progressSuperView.width =12;
+            self.progressSuperView.minradius = (TWitdh -180)/2.;
+            self.progressSuperView.radius = (TWitdh-140)/2.;
+            self.progressSuperView.reduceValue = 180;
+            self.progressSuperView.money = [[HDUserInfo shareUserInfos].totalExpectAmount doubleValue] + [[HDUserInfo shareUserInfos].wiatJoinAmunt doubleValue];
             [HDUserInfo shareUserInfos].token = token;
             
         }
@@ -170,7 +184,6 @@
 
 #pragma mark - 改变头像
 - (void)changeHead{
-    NSLog(@"changeHead");
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"从手机选择",@"拍照", nil];
     [sheet showInView:self.viewController.view];
 }
@@ -293,9 +306,9 @@
     }
     
     __weak __typeof(self) weakSelf = self;
-    
     [HttpClient POST:@"user/getQiniuToken" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
         NSString *qiniuToken = jsonObject[@"data"];
+
         [self upLoadImage:image withToken:qiniuToken];
         
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -345,6 +358,7 @@
     QNUploadManager *upManager = [[QNUploadManager alloc] initWithConfiguration:config];
     NSString *randomDkey = [NSString stringWithFormat:@"%@.%@",[string stringByAppendingString:strRandom],imageSuffix];
     [SVProgressHUD showWithStatus:@"正在上传头像"];
+
     [upManager putData:imageData key:randomDkey token:qiniuToken
               complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
                   [SVProgressHUD dismiss];
@@ -356,13 +370,11 @@
                   NSDictionary *prams = @{@"avatar":resp[@"key"],
                                           @"token":[HDUserInfo shareUserInfos].token};
                   [HttpClient POST:@"user/userInfo/update" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+                      [SVProgressHUD dismiss];
                       if (IsRequestTrue) {
                           [HDUserInfo shareUserInfos].avatar = jsonObject[@"data"][@"avatar"];
-                          [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
-                          
+                          [[NSNotificationCenter defaultCenter]postNotificationName:@"changeImageSuccess" object:nil];
                           [SVProgressHUD showSuccessWithStatus:@"头像修改成功"];
-                          
-                          
                       }
                       
                   } failure:^(NSURLSessionDataTask *operation, NSError *error) {

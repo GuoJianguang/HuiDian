@@ -77,8 +77,8 @@
     }else if ([[HDUserInfo shareUserInfos].aviableBalance doubleValue] < [self.moneyTF.text doubleValue]) {
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的可提现余额不足，请重新输入" duration:2.];
         return;
-    }else if ([self.moneyTF.text integerValue]%10 !=0){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是10的整数倍" duration:2.];
+    }else if ([self.moneyTF.text integerValue]%100 !=0){
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是100的整数倍" duration:2.];
         return;
     }else if ([self.moneyTF.text doubleValue] < 100){
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额不能小于100" duration:2.];
@@ -110,8 +110,8 @@
     }else if ([[HDUserInfo shareUserInfos].aviableBalance doubleValue] < [self.moneyTF.text doubleValue]) {
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的可提现余额不足，请重新输入" duration:2.];
         return;
-    }else if ([self.moneyTF.text integerValue]%10 !=0){
-        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是10的整数倍" duration:2.];
+    }else if ([self.moneyTF.text integerValue]%100 !=0){
+        [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额必须是100的整数倍" duration:2.];
         return;
     }else if ([self.moneyTF.text doubleValue] < 100){
         [[JAlertViewHelper shareAlterHelper]showTint:@"您的提现金额不能小于100" duration:2.];

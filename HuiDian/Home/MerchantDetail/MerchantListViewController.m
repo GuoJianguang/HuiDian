@@ -28,7 +28,11 @@
     self.sortView.titleArray = @[@"默认",@"距离排序"];
     self.naviBar.lineVIew.hidden = YES;
     self.isWhiteBg = YES;
-    self.naviBar.title = @"商家列表";
+    self.naviBar.title = self.currentIndustry;
+    if (!self.currentIndustry || [self.currentIndustry isEqualToString:@""]) {
+        self.naviBar.title = @"商家";
+    }
+    self.seqId = @"1";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
         self.isContinueRequest = YES;
@@ -42,8 +46,6 @@
     [self.tableView.mj_header beginRefreshing];
 
 }
-
-
 
 - (NSMutableArray *)dataSouceArray
 {

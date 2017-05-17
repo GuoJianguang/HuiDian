@@ -48,6 +48,8 @@
     }else{
         self.reLabel.hidden = YES;
     }
+    self.reLabel.hidden = YES;
+
     self.kimter_label.text = [NSString stringWithFormat:@"%.2f km",[self Calculationofdistance:_dataModel]];
     if ([_dataModel.distance isEqualToString:@""]) {
         self.kmiterImage.hidden = YES;

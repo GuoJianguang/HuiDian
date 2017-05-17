@@ -117,7 +117,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucs-da-44c">
-                                            <rect key="frame" x="150" y="26.5" width="75" height="28"/>
+                                            <rect key="frame" x="150" y="19.5" width="75" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="75" id="tt8-eJ-3oM"/>
                                             </constraints>
@@ -139,10 +139,10 @@
                                         <constraint firstItem="LeL-NY-frY" firstAttribute="centerY" secondItem="RVo-fW-NVd" secondAttribute="centerY" id="LbL-3o-hKP"/>
                                         <constraint firstAttribute="bottom" secondItem="xqL-MB-OIR" secondAttribute="bottom" constant="10" id="Nej-go-twm"/>
                                         <constraint firstAttribute="trailing" secondItem="xqL-MB-OIR" secondAttribute="trailing" id="X0Z-s7-NPG"/>
-                                        <constraint firstAttribute="bottom" secondItem="ucs-da-44c" secondAttribute="bottom" constant="5" id="ZJM-NT-JQg"/>
                                         <constraint firstItem="LeL-NY-frY" firstAttribute="leading" secondItem="RVo-fW-NVd" secondAttribute="trailing" constant="5" id="gqo-XQ-ud5"/>
                                         <constraint firstItem="xqL-MB-OIR" firstAttribute="top" secondItem="LeL-NY-frY" secondAttribute="bottom" id="ln7-Ak-qrs"/>
                                         <constraint firstAttribute="trailing" secondItem="ucs-da-44c" secondAttribute="trailing" id="nXw-2p-xnL"/>
+                                        <constraint firstItem="xqL-MB-OIR" firstAttribute="top" secondItem="ucs-da-44c" secondAttribute="bottom" constant="1" id="r1n-xn-znW"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxp-tV-0KA">

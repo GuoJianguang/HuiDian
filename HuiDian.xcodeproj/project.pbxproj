@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04030F6C1ECC1D2F00D0AA38 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04030F6B1ECC1D2F00D0AA38 /* RootViewController.m */; };
 		040FECFC1EC552E000CE0BC7 /* EditPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FECFA1EC552E000CE0BC7 /* EditPasswordViewController.m */; };
 		040FECFD1EC552E000CE0BC7 /* EditPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FECFB1EC552E000CE0BC7 /* EditPasswordViewController.xib */; };
 		040FED021EC559EB00CE0BC7 /* AdressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FED001EC559EB00CE0BC7 /* AdressListViewController.m */; };
@@ -249,6 +250,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04030F6A1ECC1D2F00D0AA38 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		04030F6B1ECC1D2F00D0AA38 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		040FECF91EC552E000CE0BC7 /* EditPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPasswordViewController.h; sourceTree = "<group>"; };
 		040FECFA1EC552E000CE0BC7 /* EditPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPasswordViewController.m; sourceTree = "<group>"; };
 		040FECFB1EC552E000CE0BC7 /* EditPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPasswordViewController.xib; sourceTree = "<group>"; };
@@ -819,6 +822,8 @@
 				045B01171EB9C69F00107CC2 /* Info.plist */,
 				04AD5C5B1EBB0A7200BD83D1 /* PrefixHeader.pch */,
 				04AD5C5C1EBB0A7D00BD83D1 /* TTXMacro.h */,
+				04030F6A1ECC1D2F00D0AA38 /* RootViewController.h */,
+				04030F6B1ECC1D2F00D0AA38 /* RootViewController.m */,
 				045B010F1EB9C69F00107CC2 /* HuiDian.xcdatamodeld */,
 				047ABAD21EC99B0900A5DDB1 /* Home */,
 				04614A3F1EC1AD680056951B /* Mine */,
@@ -1512,7 +1517,8 @@
 				TargetAttributes = {
 					045B00FF1EB9C69F00107CC2 = {
 						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 5C633BB845;
+						ProvisioningStyle = Manual;
 					};
 					045B011B1EB9C6A000107CC2 = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -1754,6 +1760,7 @@
 				04AD5C571EBB0A1C00BD83D1 /* UILabel+StringFrame.m in Sources */,
 				048ECEA11ECA9F64001878A4 /* ZLPhotoPickerImageView.m in Sources */,
 				042C6FBB1EC4053A0035A912 /* NSTimer+timerBlock.m in Sources */,
+				04030F6C1ECC1D2F00D0AA38 /* RootViewController.m in Sources */,
 				048ECE8E1ECA9F63001878A4 /* ZLCameraView.m in Sources */,
 				04AD5C741EBB0B3500BD83D1 /* BaseTableViewCell.m in Sources */,
 				04614A621EC1C6E50056951B /* WalletDynamicOtherTableViewCell.m in Sources */,
@@ -1905,7 +1912,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yunfeng Wang (EFD3H9LCQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yunfeng Wang (EFD3H9LCQF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1924,9 +1932,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "bb68ae0c-b744-426a-bc49-d95030cc1bb3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1953,7 +1962,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yunfeng Wang (EFD3H9LCQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yunfeng Wang (EFD3H9LCQF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1966,8 +1976,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "bb68ae0c-b744-426a-bc49-d95030cc1bb3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1978,6 +1989,8 @@
 			baseConfigurationReference = 30B982DF5333576AC1319D02 /* Pods-HuiDian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yunfeng Wang (EFD3H9LCQF)";
+				DEVELOPMENT_TEAM = 5C633BB845;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdAPI/share/UMSocial_Sdk_4.4",
@@ -1999,6 +2012,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDianForComsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb68ae0c-b744-426a-bc49-d95030cc1bb3";
+				PROVISIONING_PROFILE_SPECIFIER = huidianConsumerDelop;
 			};
 			name = Debug;
 		};
@@ -2007,6 +2022,8 @@
 			baseConfigurationReference = 140D099B88426C2C90854804 /* Pods-HuiDian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yunfeng Wang (EFD3H9LCQF)";
+				DEVELOPMENT_TEAM = 5C633BB845;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThirdAPI/share/UMSocial_Sdk_4.4",
@@ -2028,6 +2045,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HuiDian.HuiDianForComsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb68ae0c-b744-426a-bc49-d95030cc1bb3";
+				PROVISIONING_PROFILE_SPECIFIER = huidianConsumerDelop;
 			};
 			name = Release;
 		};

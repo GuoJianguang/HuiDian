@@ -33,19 +33,21 @@
     }
     
     if ([dic[@"morePic"] isKindOfClass:[NSArray class]]) {
-        model.morePic = dic[@"morePic"];
+        for (NSDictionary *parms in dic[@"morePic"]) {
+            [model.morePic addObject:[ImageModel modelWithDic:parms]];
+        }
     }else{
-        model.morePic = [NSArray array];
+        model.morePic = [NSMutableArray array];
     }
     
     
     return model;
 }
 
-- (NSArray *)morePic
+- (NSMutableArray *)morePic
 {
     if (!_morePic) {
-        _morePic = [NSArray array];
+        _morePic = [NSMutableArray array];
     }
     return _morePic;
 }
@@ -57,4 +59,22 @@
     }
     return _slidePic;
 }
+
+
+
+@end
+
+
+@implementation ImageModel
+
++ (id)modelWithDic:(NSDictionary *)dic
+{
+    ImageModel *model = [[ImageModel alloc]init];
+    model.image = NullToSpace(dic[@"image"]);
+    model.height = [NullToNumber(dic[@"height"]) doubleValue];
+    model.width = [NullToNumber(dic[@"width"]) doubleValue];
+    return model;
+
+}
+
 @end

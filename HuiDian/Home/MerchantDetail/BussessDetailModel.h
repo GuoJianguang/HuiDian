@@ -22,6 +22,15 @@
 @property (nonatomic, copy)NSString *recommend;
 @property (nonatomic, copy)NSArray *slidePic;
 @property (nonatomic, copy)NSString *trade;
-@property (nonatomic, copy)NSArray *morePic;
+@property (nonatomic, copy)NSMutableArray *morePic;
 
 @end
+
+@interface ImageModel : BaseModel
+
+@property (nonatomic, assign)CGFloat height;
+@property (nonatomic, copy)NSString *image;
+@property (nonatomic, assign)CGFloat width;
+
+@end
+

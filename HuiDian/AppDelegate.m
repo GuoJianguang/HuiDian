@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     [self SetTheThirdParty:launchOptions];
     [HDUserInfo shareUserInfos].token = @"";
+    [[NSNotificationCenter defaultCenter]postNotificationName:AutoLoginAfterGetDeviceToken object:nil userInfo:nil];
 
     return YES;
 }
@@ -30,7 +31,21 @@
     [AMapServices sharedServices].apiKey = MAP_APPKEY_APPSTORE;
 
 }
-
+#pragma mark - 私有方法-获取deviceToken
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+//    [UMessage registerDeviceToken:deviceToken];
+    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    NSString *str = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [HDUserInfo shareUserInfos].devicetoken = str;
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:AutoLoginAfterGetDeviceToken object:nil userInfo:nil];
+    NSLog(@"deviceToken:%@", str);
+    // [3]:向个推服务器注册deviceToken
+    //    if (_gexinPusher) {
+    //        [_gexinPusher registerDeviceToken:_deviceToken];
+    //    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

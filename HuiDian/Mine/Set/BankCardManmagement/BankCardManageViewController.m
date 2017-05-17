@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view from its nib.
     self.naviBar.title = @"管理银行卡";
     if (self.isYetBingdingCard) {
-        self.naviBar.hiddenDetailBtn = NO;
+        self.naviBar.hiddenDetailBtn = YES;
         self.naviBar.detailTitle = @"编辑";
     }
     

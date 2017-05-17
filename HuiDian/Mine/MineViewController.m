@@ -20,8 +20,7 @@
     // Do any additional setup after loading the view.
     self.naviBar.hiddenBackBtn = YES;
     self.naviBar.title = @"个人中心";
-    self.naviBar.hiddenDetailBtn = NO;
-    self.naviBar.hiddenDetailBtn = NO;
+    self.naviBar.hiddenDetailBtn = YES;
     self.naviBar.detailImage = [UIImage imageNamed:@"icon_scan"];
     self.naviBar.delegate = self;
     self.bgImageView.hidden = YES;
@@ -30,6 +29,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(logout:) name:LogOutNSNotification object:nil];
 
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeImageSuccess) name:@"changeImageSuccess" object:nil];
 
 }
 
@@ -45,6 +45,11 @@
     self.tabBarController.selectedIndex = 0;
 }
 
+- (void)changeImageSuccess
+{
+    [SVProgressHUD showSuccessWithStatus:@"头像修改成功"];
+    [((MineTableViewCell *)self.tableView.visibleCells[0]).headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder];
+}
 #pragma mark - 扫一扫
 - (void)detailBtnClick
 {

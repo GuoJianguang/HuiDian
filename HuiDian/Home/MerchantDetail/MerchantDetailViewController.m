@@ -28,14 +28,17 @@
 #pragma mark - 商户详情接口请求
 - (void)detailRequest:(NSString *)mchCode
 {
+    [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeBlack];
     NSDictionary *parms = @{@"code":mchCode};
     [HttpClient GET:@"mch/get" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        [SVProgressHUD dismiss];
         if (IsRequestTrue) {
             self.dataModel = [BussessDetailModel modelWithDic:jsonObject[@"data"]];
             [self.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
+        [SVProgressHUD dismiss];
+
     }];
 }
 
@@ -66,7 +69,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return THeight;
+    CGFloat height = 0;
+    for (ImageModel *model in self.dataModel.morePic) {
+        height += TWitdh*(model.height/model.width);
+    }
+    return TWitdh *(55/75.) + height;
 }
 
 

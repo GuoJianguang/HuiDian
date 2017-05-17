@@ -38,8 +38,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="364.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-Zf-6nu">
-                                <rect key="frame" x="189" y="105" width="299" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <rect key="frame" x="189" y="111" width="299" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,10 +129,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="493" height="452"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cji-Yf-4Z1" customClass="RoundView">
-                                <rect key="frame" x="0.0" y="30" width="493" height="392"/>
+                                <rect key="frame" x="0.0" y="0.0" width="493" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待回馈金额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq7-jH-M6G">
-                                        <rect key="frame" x="20" y="345" width="100" height="17"/>
+                                        <rect key="frame" x="20" y="395" width="100" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Hux-09-2UX"/>
                                         </constraints>
@@ -141,7 +141,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总消费金额¥300" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbU-ia-gDQ">
-                                        <rect key="frame" x="373" y="345" width="100" height="33.5"/>
+                                        <rect key="frame" x="373" y="395" width="100" height="33.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="2Q0-rh-zdD"/>
                                         </constraints>
@@ -163,10 +163,10 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Ft2-si-rEG" secondAttribute="bottom" id="3wQ-Nj-xPu"/>
                             <constraint firstItem="Ft2-si-rEG" firstAttribute="top" secondItem="wGR-Bb-9Iq" secondAttribute="top" id="Dcg-iL-bKX"/>
-                            <constraint firstItem="Cji-Yf-4Z1" firstAttribute="top" secondItem="wGR-Bb-9Iq" secondAttribute="top" constant="30" id="Iga-ic-fVa"/>
+                            <constraint firstItem="Cji-Yf-4Z1" firstAttribute="top" secondItem="wGR-Bb-9Iq" secondAttribute="top" id="Iga-ic-fVa"/>
                             <constraint firstAttribute="bottom" secondItem="Ft2-si-rEG" secondAttribute="bottom" id="KKT-d1-LQR"/>
                             <constraint firstAttribute="trailing" secondItem="Cji-Yf-4Z1" secondAttribute="trailing" id="O2o-6j-ncO"/>
-                            <constraint firstAttribute="bottom" secondItem="Cji-Yf-4Z1" secondAttribute="bottom" constant="30" id="gmu-5X-RrY"/>
+                            <constraint firstAttribute="bottom" secondItem="Cji-Yf-4Z1" secondAttribute="bottom" constant="10" id="gmu-5X-RrY"/>
                             <constraint firstAttribute="trailing" secondItem="Ft2-si-rEG" secondAttribute="trailing" id="vLF-lr-R28"/>
                             <constraint firstItem="Ft2-si-rEG" firstAttribute="leading" secondItem="wGR-Bb-9Iq" secondAttribute="leading" id="w8T-CV-fX5"/>
                             <constraint firstItem="Cji-Yf-4Z1" firstAttribute="leading" secondItem="wGR-Bb-9Iq" secondAttribute="leading" id="xBG-oV-Lgq"/>

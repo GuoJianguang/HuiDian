@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="507" id="KGk-i7-Jjw" customClass="MerchantDetailTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="507"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="655" id="KGk-i7-Jjw" customClass="MerchantDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="506.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="654.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-P4-nCG" customClass="SwipeView">
@@ -45,7 +45,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0L-di-vhw">
                         <rect key="frame" x="0.0" y="162" width="320" height="38.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnu-j2-Ql1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnu-j2-Ql1">
                                 <rect key="frame" x="12" y="9" width="296" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -76,7 +76,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnA-Jn-MGd">
                                 <rect key="frame" x="12" y="0.0" width="273" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title=" 成都大酒店旁边" image="icon_locate_gray">
+                                <state key="normal" title="--" image="icon_locate_gray">
                                     <color key="titleColor" red="0.27256193760000003" green="0.15447531640000001" blue="0.43539378049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -126,6 +126,10 @@
                             <constraint firstAttribute="bottom" secondItem="Ohu-Jo-brw" secondAttribute="bottom" id="zqE-IJ-a9o"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bad-PX-jYQ">
+                        <rect key="frame" x="0.0" y="234.5" width="320" height="420"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="D0L-di-vhw" firstAttribute="top" secondItem="r9v-P4-nCG" secondAttribute="bottom" id="0nD-f1-dyV"/>
@@ -133,19 +137,24 @@
                     <constraint firstItem="4oj-JW-uK4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CGO-wE-Ff6"/>
                     <constraint firstItem="4oj-JW-uK4" firstAttribute="top" secondItem="D0L-di-vhw" secondAttribute="bottom" id="Cwa-Yo-hqp"/>
                     <constraint firstAttribute="trailing" secondItem="r9v-P4-nCG" secondAttribute="trailing" id="D5x-1u-4aq"/>
+                    <constraint firstAttribute="bottom" secondItem="Bad-PX-jYQ" secondAttribute="bottom" id="EqL-Gn-Myl"/>
                     <constraint firstItem="r9v-P4-nCG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YIf-zX-nud"/>
                     <constraint firstAttribute="trailing" secondItem="D0L-di-vhw" secondAttribute="trailing" id="bIL-R4-1Vg"/>
+                    <constraint firstItem="Bad-PX-jYQ" firstAttribute="top" secondItem="4oj-JW-uK4" secondAttribute="bottom" id="dGp-e7-7ui"/>
+                    <constraint firstItem="Bad-PX-jYQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hEV-Fd-MVx"/>
                     <constraint firstItem="D0L-di-vhw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jWy-cJ-Prd"/>
                     <constraint firstItem="r9v-P4-nCG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="x63-Ya-j9m"/>
+                    <constraint firstAttribute="trailing" secondItem="Bad-PX-jYQ" secondAttribute="trailing" id="xQZ-d6-wUM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressBtn" destination="hnA-Jn-MGd" id="c3J-xu-zW4"/>
+                <outlet property="imageSuperView" destination="Bad-PX-jYQ" id="bft-ue-8oe"/>
                 <outlet property="mchantName" destination="Mnu-j2-Ql1" id="DEt-5m-NMA"/>
                 <outlet property="pageCongtrol" destination="Pb6-t2-zuJ" id="XIP-nm-swI"/>
                 <outlet property="swipeView" destination="r9v-P4-nCG" id="S2m-ta-8g3"/>
             </connections>
-            <point key="canvasLocation" x="-487" y="311"/>
+            <point key="canvasLocation" x="-547" y="-266"/>
         </tableViewCell>
     </objects>
     <resources>

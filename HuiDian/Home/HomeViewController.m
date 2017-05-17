@@ -18,6 +18,7 @@
 #import "MerchantSearchViewController.h"
 #import "MerchantSearchResultViewController.h"
 #import "MineViewController.h"
+#import "MerchantListViewController.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,CityListViewDelegate,MerchantSearchViewDelegate,UITabBarControllerDelegate>
 @property (nonatomic, assign)BOOL isAlreadyRefrefsh;
@@ -55,6 +56,7 @@
     }];
     [self.tableView noDataSouce];
     self.locationCity = @"成都";
+    self.currentCity = @"成都";
 
     [self loadDataUseLocation];
 
@@ -205,12 +207,12 @@
 #pragma mark - 获取商家列表
 - (void)detailReqest:(BOOL)isHeader andCity:(NSString *)city andsortingWay:(NSString *)sortingWay
 {
-    NSString *searchcity = [self.currentCity substringToIndex:2];
+    NSString *searchcity = [NullToSpace(self.currentCity) substringToIndex:2];
 
     NSDictionary *parms = @{@"pageNo":@(self.page),
                             @"pageSize":MacoRequestPageCount,
                             @"trade":@"",
-                            @"mchCity":searchcity,
+                            @"mchCity":NullToSpace(searchcity),
                             @"keyword":@"",
                             @"longitude":@([HDUserInfo shareUserInfos].locationCoordinate.longitude),
                             @"latitude":@([HDUserInfo shareUserInfos].locationCoordinate.latitude),
@@ -342,10 +344,16 @@
 - (void)sureSearch:(NSString *)keyWord city:(NSString *)cityName
 {
     [self.searchVC.view removeFromSuperview];
-    MerchantSearchResultViewController *resultVC = [[MerchantSearchResultViewController alloc]init];
-    resultVC.currentIndustry = @"";
+//    mer *resultVC = [[MerchantSearchResultViewController alloc]init];
+//    resultVC.currentIndustry = @"";
+//    resultVC.keyWord = keyWord;
+//    resultVC.currentCity = cityName;
+//    [self.navigationController pushViewController:resultVC animated:YES];
+    
+    MerchantListViewController *resultVC = [[MerchantListViewController alloc]init];
     resultVC.keyWord = keyWord;
-    resultVC.currentCity = cityName;
+    resultVC.currentIndustry = @"";
+    resultVC.currentCity = [HDUserInfo shareUserInfos].locationCity;
     [self.navigationController pushViewController:resultVC animated:YES];
 }
 @end

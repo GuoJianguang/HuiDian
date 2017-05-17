@@ -35,8 +35,12 @@
     self.loginBtn.layer.masksToBounds = YES;
     
     self.naviBar.delegate = self;
-    self.passwordTF.text = @"123456";
-    self.userTF.text = @"18782027924";
+    
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:LoginUserName]) {
+        self.userTF.text = [[NSUserDefaults standardUserDefaults]objectForKey:LoginUserName];
+    }
+//    self.passwordTF.text = @"123456";
+//    self.userTF.text = @"18782027924";
 }
 
 

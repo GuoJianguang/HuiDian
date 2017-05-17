@@ -48,6 +48,18 @@
     }
     [self.swipeView reloadData];
     [[AutoScroller shareAutoScroller]autoSwipeView:self.swipeView WithPageView:self.pageCongtrol WithDataSouceArray:[NSMutableArray arrayWithArray:_dataModel.slidePic]];
+    
+    CGFloat tempHeight =0;
+    for (UIView *view in self.imageSuperView.subviews) {
+        [view removeFromSuperview];
+    }
+    for (ImageModel *imageModel in _dataModel.morePic) {
+        UIImageView *imageView = [[UIImageView alloc]init];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageModel.image] placeholderImage:LoadingErrorDefaultImageBanner];
+        imageView.frame = CGRectMake(0, tempHeight, TWitdh, TWitdh*(imageModel.height/imageModel.width));
+        [self.imageSuperView addSubview:imageView];
+        tempHeight += TWitdh*(imageModel.height/imageModel.width);
+    }
 }
 
 

@@ -23,4 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addressBtn;
 - (IBAction)addressBtn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UIView *imageSuperView;
+
+
 @end

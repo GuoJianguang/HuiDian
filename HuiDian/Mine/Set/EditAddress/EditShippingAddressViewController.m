@@ -56,6 +56,7 @@
     self.shippingPersonTF.delegate = self;
     self.provincesTF.delegate = self;
     self.phoneTF.delegate = self;
+    self.ZipCodeTF.delegate = self;
 
     if (self.addressModel) {
         self.shippingPersonTF.text = self.addressModel.name;
@@ -232,6 +233,11 @@
     
     if (textField == self.phoneTF) {
         if (self.phoneTF.text.length >10 && ![string isEqualToString:@""]) {
+            return NO;
+        }
+    }
+    if (textField == self.ZipCodeTF) {
+        if (textField.text.length>5 && ![string isEqualToString:@""]) {
             return NO;
         }
     }
