@@ -48,6 +48,8 @@
     self.headImageView.layer.cornerRadius = (TWitdh*(128/375.) -30)/2.;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.headImageView.layer.borderWidth = 4;
+    self.headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.nameLabel.text = [HDUserInfo shareUserInfos].idcardName;
     
     self.xiaofeiView.backgroundColor = MacoYellowColor;

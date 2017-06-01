@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="465" id="KGk-i7-Jjw" customClass="HomeActivityTableViewcell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="465"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="464.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBy-zS-edc" customClass="SwipeView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="136.5"/>
+                        <subviews>
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o97-eS-blS">
+                                <rect key="frame" x="141" y="99.5" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TBy-zS-edc" secondAttribute="height" multiplier="750/320" id="3aV-RK-uqa"/>
+                            <constraint firstAttribute="bottom" secondItem="o97-eS-blS" secondAttribute="bottom" id="hCm-Ea-7eM"/>
+                            <constraint firstItem="o97-eS-blS" firstAttribute="centerX" secondItem="TBy-zS-edc" secondAttribute="centerX" id="jF1-p0-qwr"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STJ-KD-xwI">
+                        <rect key="frame" x="0.0" y="136.5" width="320" height="209"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOH-RW-688">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayI-Bf-ly7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title=" 人气商家" image="icon_popular_merchants">
+                                            <color key="titleColor" red="0.27256193760000003" green="0.15447531640000001" blue="0.43539378049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moreTopShip:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BHf-uA-MQp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ayI-Bf-ly7" firstAttribute="leading" secondItem="SOH-RW-688" secondAttribute="leading" id="00i-UE-dKZ"/>
+                                    <constraint firstAttribute="width" secondItem="SOH-RW-688" secondAttribute="height" multiplier="75/8" id="2Ry-VS-5mi"/>
+                                    <constraint firstAttribute="trailing" secondItem="ayI-Bf-ly7" secondAttribute="trailing" id="Zhj-V5-yIz"/>
+                                    <constraint firstAttribute="bottom" secondItem="ayI-Bf-ly7" secondAttribute="bottom" id="nTC-AP-0eX"/>
+                                    <constraint firstItem="ayI-Bf-ly7" firstAttribute="top" secondItem="SOH-RW-688" secondAttribute="top" id="qak-x5-Zi3"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WlZ-ka-zkz">
+                                <rect key="frame" x="8" y="34" width="304" height="172"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aGO-lI-Al9">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WlZ-ka-zkz" secondAttribute="bottom" constant="3" id="6O9-zp-HLU"/>
+                            <constraint firstItem="WlZ-ka-zkz" firstAttribute="leading" secondItem="STJ-KD-xwI" secondAttribute="leading" constant="8" id="7wg-mz-b3n"/>
+                            <constraint firstAttribute="height" constant="209" id="E44-vg-WQB"/>
+                            <constraint firstAttribute="trailing" secondItem="SOH-RW-688" secondAttribute="trailing" id="Jks-ei-aDa"/>
+                            <constraint firstAttribute="trailing" secondItem="WlZ-ka-zkz" secondAttribute="trailing" constant="8" id="aHf-Fm-CMD"/>
+                            <constraint firstItem="WlZ-ka-zkz" firstAttribute="top" secondItem="SOH-RW-688" secondAttribute="bottom" id="aqi-cb-olE"/>
+                            <constraint firstItem="SOH-RW-688" firstAttribute="top" secondItem="STJ-KD-xwI" secondAttribute="top" id="fUY-8L-lt4"/>
+                            <constraint firstItem="SOH-RW-688" firstAttribute="leading" secondItem="STJ-KD-xwI" secondAttribute="leading" id="ozh-OJ-QAz"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILu-5a-0Ud">
+                        <rect key="frame" x="0.0" y="345.5" width="320" height="34"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XW4-Fu-NrV">
+                                <rect key="frame" x="0.0" y="-0.5" width="320" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title=" 附近商家" image="icon_nearby_shops">
+                                    <color key="titleColor" red="0.27256193760000003" green="0.15447531640000001" blue="0.43539378049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreTopShip:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NaO-rU-B4D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XW4-Fu-NrV" firstAttribute="top" secondItem="ILu-5a-0Ud" secondAttribute="top" id="Gnp-zi-ghJ"/>
+                            <constraint firstAttribute="bottom" secondItem="XW4-Fu-NrV" secondAttribute="bottom" id="Xfq-2T-hnQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XW4-Fu-NrV" secondAttribute="trailing" id="cob-cx-vam"/>
+                            <constraint firstAttribute="width" secondItem="ILu-5a-0Ud" secondAttribute="height" multiplier="75/8" id="ncW-6N-z8C"/>
+                            <constraint firstItem="XW4-Fu-NrV" firstAttribute="leading" secondItem="ILu-5a-0Ud" secondAttribute="leading" id="z2L-Ah-D4F"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ILu-5a-0Ud" secondAttribute="trailing" id="07d-Om-Ial"/>
+                    <constraint firstItem="TBy-zS-edc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0mL-mx-4uZ"/>
+                    <constraint firstItem="ILu-5a-0Ud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0pZ-Gd-fhi"/>
+                    <constraint firstItem="TBy-zS-edc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="A5A-BW-Tzy"/>
+                    <constraint firstItem="STJ-KD-xwI" firstAttribute="top" secondItem="TBy-zS-edc" secondAttribute="bottom" id="EdM-3B-5kc"/>
+                    <constraint firstItem="STJ-KD-xwI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QCd-uN-AWU"/>
+                    <constraint firstItem="ILu-5a-0Ud" firstAttribute="top" secondItem="STJ-KD-xwI" secondAttribute="bottom" id="Wfq-mP-oO8"/>
+                    <constraint firstAttribute="trailing" secondItem="STJ-KD-xwI" secondAttribute="trailing" id="dI1-ki-b9S"/>
+                    <constraint firstAttribute="trailing" secondItem="TBy-zS-edc" secondAttribute="trailing" id="hoN-oT-rKe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="WlZ-ka-zkz" id="pft-ET-f67"/>
+                <outlet property="flagShipHeight" destination="E44-vg-WQB" id="UHm-R5-SRa"/>
+                <outlet property="pageView" destination="o97-eS-blS" id="yH8-P2-b8z"/>
+                <outlet property="swipeView" destination="TBy-zS-edc" id="pgH-xi-Ua7"/>
+            </connections>
+            <point key="canvasLocation" x="-368" y="-704.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_nearby_shops" width="17" height="17"/>
+        <image name="icon_popular_merchants" width="17" height="17"/>
+    </resources>
+</document>

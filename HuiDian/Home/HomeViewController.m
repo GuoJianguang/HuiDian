@@ -19,10 +19,16 @@
 #import "MerchantSearchResultViewController.h"
 #import "MineViewController.h"
 #import "MerchantListViewController.h"
+#import "HomeActivityTableViewcell.h"
+#import "FlagshipCollectionViewCell.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,CityListViewDelegate,MerchantSearchViewDelegate,UITabBarControllerDelegate>
 @property (nonatomic, assign)BOOL isAlreadyRefrefsh;
-@property (nonatomic, strong)NSMutableArray *dataSouceArray;;
+@property (nonatomic, strong)NSMutableArray *dataSouceArray;
+
+@property(nonatomic,strong)NSMutableArray *activityArray;
+
+@property (nonatomic, strong)NSMutableArray *popularArray;
 @property (nonatomic, assign)NSInteger page;
 
 @property (nonatomic, strong)NSString *locationCity;
@@ -49,12 +55,16 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.isAlreadyRefrefsh = YES;
         weak_self.page = 1;
-        [self detailReqest:YES andCity:self.currentCity andsortingWay:self.sortWay];
+        
+        [weak_self getActivityRequest];
+//        [self detailReqest:YES andCity:self.currentCity andsortingWay:self.sortWay];
     }];
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self detailReqest:NO andCity:self.currentCity andsortingWay:self.sortWay];
     }];
-    [self.tableView noDataSouce];
+    [self.tableView addNoDatasouceWithCallback:^{
+        [self.tableView.mj_header beginRefreshing];
+    } andAlertSting:@"网络连接失败" andErrorImage:@"pic_4" andRefreshBtnHiden:NO];
     self.locationCity = @"成都";
     self.currentCity = @"成都";
 
@@ -91,6 +101,22 @@
         _dataSouceArray = [NSMutableArray array];
     }
     return _dataSouceArray;
+}
+
+- (NSMutableArray *)activityArray
+{
+    if (!_activityArray) {
+        _activityArray = [NSMutableArray array];
+    }
+    return _activityArray;
+}
+
+- (NSMutableArray *)popularArray
+{
+    if (!_popularArray) {
+        _popularArray = [NSMutableArray array];
+    }
+    return _popularArray;
 }
 #pragma mark -使用当前位置加载数据
 - (BOOL)myContainsString:(NSString*)string and:(NSString *)otherString {
@@ -151,11 +177,12 @@
         cell.isAlreadyRefrefsh = self.isAlreadyRefrefsh;
         return cell;
     }else if (indexPath.row == 2){
-        HomeSortTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomeSortTableViewCell indentify]];
+        HomeActivityTableViewcell *cell = [tableView dequeueReusableCellWithIdentifier:[HomeActivityTableViewcell indentify]];
         if (!cell) {
-            cell = [HomeSortTableViewCell newCell];
+            cell = [HomeActivityTableViewcell newCell];
         }
-        cell.sortWay = self.sortWay;
+        cell.activityAarray = self.activityArray;
+        cell.flagShipArray = self.popularArray;
         return cell;
     }else{
         MerchantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MerchantTableViewCell indentify]];
@@ -182,7 +209,7 @@
         return buttonHeight * 2 + intervalY*2 + 18;
     }else if (indexPath.row == 2){
 
-        return TWitdh*(70/750.);
+        return TWitdh*(710/750.);
     }
     return TWitdh*(220/750.);
 }
@@ -204,6 +231,48 @@
     merchantDVC.merchantCode = model.code;
     [self.navigationController pushViewController:merchantDVC animated:YES];
 }
+#pragma mark - 活动接口
+
+- (void)getActivityRequest
+{
+    [HttpClient POST:@"activity/index/list" parameters:nil success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if ([jsonObject[@"data"] isKindOfClass:[NSArray class]]) {
+                NSArray *array = jsonObject[@"data"];
+                for (NSDictionary *dic in array) {
+                    [self.activityArray addObject:[ActivityModel modelWithDic:dic]];
+                }
+                
+            }
+            [self getPopularMRequest];
+        }
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
+    
+}
+
+#pragma mark - 人气商家
+- (void)getPopularMRequest{
+    NSDictionary *parms = @{@"city":[HDUserInfo shareUserInfos].locationCity};
+    [HttpClient POST:@"mch/hotMchs" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
+        if (IsRequestTrue) {
+            if ([jsonObject[@"data"] isKindOfClass:[NSArray class]]) {
+                NSArray *array = jsonObject[@"data"];
+                for (NSDictionary *dic in array) {
+                    [self.popularArray addObject:[FlagShipDataModel modelWithDic:dic]];
+                }
+            }
+            
+            [self detailReqest:YES andCity:self.currentCity andsortingWay:self.sortWay];
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+    }];
+    
+}
+
 #pragma mark - 获取商家列表
 - (void)detailReqest:(BOOL)isHeader andCity:(NSString *)city andsortingWay:(NSString *)sortingWay
 {
