@@ -67,7 +67,17 @@
 //        self.flagShipHeight.constant = TWitdh*(310/750.);
 //    }
     self.flagShipHeight.constant = TWitdh*(310/750.);
-
+    if (_flagShipArray.count == 2) {
+        UILabel *alerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, TWitdh - 16, TWitdh*(230/750.))];
+        alerLabel.backgroundColor = [UIColor grayColor];
+        alerLabel.text = @"暂无人气商家";
+        alerLabel.textAlignment = NSTextAlignmentCenter;
+        alerLabel.textColor = MacoColor;
+        alerLabel.font = [UIFont systemFontOfSize:25];
+        [self.collectionView addSubview:alerLabel];
+        return;
+    }
+    
     [self.collectionView reloadData];
 }
 
