@@ -37,7 +37,7 @@
         [self invitationRequest:NO andTargetMchCode:nil];
     }];
     [self.tableView.mj_header beginRefreshing];
-
+    [self.tableView noDataSouce];
 }
 
 

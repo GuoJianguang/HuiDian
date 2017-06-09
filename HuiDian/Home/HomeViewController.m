@@ -51,7 +51,7 @@
     self.searchView.layer.cornerRadius = 18;
     self.searchView.layer.masksToBounds = YES;
     self.searchTF.delegate = self;
-    self.sortWay = @"1";
+    self.sortWay = @"2";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weak_self.isAlreadyRefrefsh = YES;
         weak_self.page = 1;
@@ -183,6 +183,7 @@
         }
         cell.activityAarray = self.activityArray;
         cell.flagShipArray = self.popularArray;
+        cell.merchantArray = self.dataSouceArray;
         return cell;
     }else{
         MerchantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MerchantTableViewCell indentify]];
@@ -198,7 +199,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return TWitdh*(35/75.);
+        return TWitdh*(382/750.);
     }else if (indexPath.row == 1){
         CGFloat intervalX = 50.0;/**<横向间隔*/
         CGFloat intervalY = 15.0;/**<纵向间隔*/
@@ -209,7 +210,7 @@
         return buttonHeight * 2 + intervalY*2 + 18;
     }else if (indexPath.row == 2){
 
-        return TWitdh*(710/750.);
+        return TWitdh*(590/750.);
     }
     return TWitdh*(220/750.);
 }
@@ -217,9 +218,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.dataSouceArray.count == 0) {
-        return 2;
-    }
+
     return self.dataSouceArray.count + 3;
     //    return 3;
 }
@@ -239,6 +238,7 @@
         if (IsRequestTrue) {
             if ([jsonObject[@"data"] isKindOfClass:[NSArray class]]) {
                 NSArray *array = jsonObject[@"data"];
+                [self.activityArray removeAllObjects];
                 for (NSDictionary *dic in array) {
                     [self.activityArray addObject:[ActivityModel modelWithDic:dic]];
                 }
@@ -259,6 +259,7 @@
         if (IsRequestTrue) {
             if ([jsonObject[@"data"] isKindOfClass:[NSArray class]]) {
                 NSArray *array = jsonObject[@"data"];
+                [self.popularArray removeAllObjects];
                 for (NSDictionary *dic in array) {
                     [self.popularArray addObject:[FlagShipDataModel modelWithDic:dic]];
                 }
@@ -303,7 +304,7 @@
             for (NSDictionary *dic in array) {
                 [self.dataSouceArray addObject:[MerchantDataModel modelWithDic:dic]];
             }
-            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray andBannerArray:@[@"1"]];
+//            [self.tableView judgeIsHaveDataSouce:self.dataSouceArray andBannerArray:@[@"1"]];
             [self.tableView reloadData];
         }
         

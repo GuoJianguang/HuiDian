@@ -48,7 +48,7 @@
 - (void)changeImageSuccess
 {
     [SVProgressHUD showSuccessWithStatus:@"头像修改成功"];
-    [((MineTableViewCell *)self.tableView.visibleCells[0]).headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder];
+    [((MineTableViewCell *)self.tableView.visibleCells[0]).headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultImageCircular];
 }
 #pragma mark - 扫一扫
 - (void)detailBtnClick
@@ -60,6 +60,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (THeight == 480) {
+        return THeight;
+    }
+    if (TWitdh == 320) {
+        return THeight-64 ;
+    }
     return THeight - 49 - 64;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

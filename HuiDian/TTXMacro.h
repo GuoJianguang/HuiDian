@@ -38,7 +38,7 @@
 //加载失败的图片
 #define LoadingErrorDefaultImageCircular ([UIImage imageNamed:@"defaultImagecircular"])
 #define LoadingErrorDefaultImageSquare ([UIImage imageNamed:@"defaultImageSquare"])
-#define LoadingErrorDefaultImageBanner ([UIImage imageNamed:@"defaultImageSquare"])
+#define LoadingErrorDefaultImageBanner ([UIImage imageNamed:@"shangjiaxiangqingdatu"])
 #define LoadingErrorDefaultHearder ([UIImage imageNamed:@"pic_head_portrait"])
 
 #define AppIconImage ([UIImage imageNamed:@"AppIcon"])

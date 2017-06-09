@@ -26,7 +26,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.sortView.titleArray = @[@"默认",@"距离排序"];
-    self.naviBar.lineVIew.hidden = YES;
+//    self.naviBar.lineVIew.hidden = YES;
+    self.naviBar.lineVIew.backgroundColor = MacoTitleColor;
     self.isWhiteBg = YES;
     self.naviBar.title = self.currentIndustry;
     if (!self.currentIndustry || [self.currentIndustry isEqualToString:@""]) {

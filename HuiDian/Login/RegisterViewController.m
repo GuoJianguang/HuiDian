@@ -25,14 +25,15 @@
     self.itemView.layer.masksToBounds = YES;
     self.itemView.backgroundColor = MacoYellowColor;
     [self.view sendSubviewToBack:self.bgImageView];
-    self.view1.backgroundColor = self.view2.backgroundColor = self.view3.backgroundColor = self.view4.backgroundColor = self.view5.backgroundColor = MacoTitleColor;
+    self.view1.backgroundColor = self.view2.backgroundColor = self.view3.backgroundColor = self.view4.backgroundColor = self.view5.backgroundColor =self.view6.backgroundColor =MacoTitleColor;
     [self.passwordTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
     [self.phoneTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
     [self.grapCodeTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
     [self.phoneCodeTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
     [self.surePasswordTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
-    
-    self.passwordTF.textColor = self.phoneTF.textColor = self.grapCodeTF.textColor = self.phoneCodeTF.textColor = self.surePasswordTF.textColor = MacoTitleColor;
+    [self.recommondPhoneTF setValue:MacoTitleColor forKeyPath:@"_placeholderLabel.textColor"];
+
+    self.passwordTF.textColor = self.phoneTF.textColor = self.grapCodeTF.textColor = self.phoneCodeTF.textColor = self.surePasswordTF.textColor = self.recommondPhoneTF.textColor=MacoTitleColor;
     
     self.sureBtn.backgroundColor = MacoBlueColor;
     [self.sureBtn setTitleColor:MacoYellowColor forState:UIControlStateNormal];
@@ -59,6 +60,15 @@
     if (TWitdh == 320) {
         self.rgiht.constant = self.left.constant = 38;
     }
+    if (THeight == 480) {
+        self.viewTop.constant = 74;
+        self.copyrightHeight.constant = THeight*(70/1134.);
+        self.sureBtnHeight.constant = 30;
+        self.sureBtn.layer.cornerRadius = 15;
+    }else{
+        self.copyrightHeight.constant = THeight*(100/1134.);
+        
+    }
 }
 
 - (void)protocolGes
@@ -77,11 +87,12 @@
     [self.grapCodeTF resignFirstResponder];
     
     if ([self valueValidated]) {
-        //忘记密码接口请求
+        //注册接口请求
         NSString *password = [[NSString stringWithFormat:@"%@%@",self.passwordTF.text,PasswordKey]md5_32];
         NSDictionary *parms = @{@"phone":self.phoneTF.text,
                                 @"verifyCode":self.phoneCodeTF.text,
-                                @"password":password};
+                                @"password":password,
+                                @"recomendphone":self.recommondPhoneTF.text};
         [HttpClient POST:@"user/register" parameters:parms success:^(NSURLSessionDataTask *operation, id jsonObject) {
             [SVProgressHUD dismiss];
             if (IsRequestTrue) {

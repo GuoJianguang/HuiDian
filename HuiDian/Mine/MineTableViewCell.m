@@ -41,6 +41,7 @@
     self.goConsumeBtn.layer.masksToBounds = YES;
     self.xiaofeiLabel.adjustsFontSizeToFitWidth= YES;
     self.setLabel.textColor = self.walletLabel.textColor = [UIColor colorFromHexString:@"#aaaaaa"];
+
     self.xiaofeiLabel.textColor = self.waitfeedback.textColor =self.totalconsumptionAmount.textColor= MacoTitleColor;
     
     self.xiaofeiLabel.text = [NSString stringWithFormat:@"消费抵用金%.2f元",[[HDUserInfo shareUserInfos].consumeBalance doubleValue]];
@@ -73,6 +74,13 @@
     
     [self searchUserInfor];
 
+    
+    if (TWitdh == 320) {
+        self.bottomheight.constant = TWitdh/2.2;
+    }else{
+        self.bottomheight.constant = TWitdh/3.;
+
+    }
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeHead)];
     self.headImageView.userInteractionEnabled = YES;
@@ -116,7 +124,7 @@
         if (IsRequestTrue) {
             
             [[HDUserInfo shareUserInfos]setUserinfoWithdic:jsonObject[@"data"]];
-            [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultHearder completed:NULL];
+            [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[HDUserInfo shareUserInfos].avatar] placeholderImage:LoadingErrorDefaultImageCircular completed:NULL];
 
             self.nameLabel.text = [HDUserInfo shareUserInfos].idcardName;
             self.totalconsumptionAmount.text = [NSString stringWithFormat:@"总消费金额¥%.2f",[[HDUserInfo shareUserInfos].totalConsumeAmount doubleValue]];

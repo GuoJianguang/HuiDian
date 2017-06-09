@@ -20,20 +20,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBy-zS-edc" customClass="SwipeView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="136.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                         <subviews>
-                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o97-eS-blS">
-                                <rect key="frame" x="141" y="99.5" width="39" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o97-eS-blS">
+                                <rect key="frame" x="141" y="58.5" width="39" height="37"/>
                             </pageControl>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="TBy-zS-edc" secondAttribute="height" multiplier="750/320" id="3aV-RK-uqa"/>
-                            <constraint firstAttribute="bottom" secondItem="o97-eS-blS" secondAttribute="bottom" id="hCm-Ea-7eM"/>
+                            <constraint firstAttribute="width" secondItem="TBy-zS-edc" secondAttribute="height" multiplier="750/200" id="3aV-RK-uqa"/>
+                            <constraint firstAttribute="bottom" secondItem="o97-eS-blS" secondAttribute="bottom" constant="-10" id="hCm-Ea-7eM"/>
                             <constraint firstItem="o97-eS-blS" firstAttribute="centerX" secondItem="TBy-zS-edc" secondAttribute="centerX" id="jF1-p0-qwr"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STJ-KD-xwI">
-                        <rect key="frame" x="0.0" y="136.5" width="320" height="209"/>
+                        <rect key="frame" x="0.0" y="85.5" width="320" height="209"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOH-RW-688">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
@@ -82,7 +82,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILu-5a-0Ud">
-                        <rect key="frame" x="0.0" y="345.5" width="320" height="34"/>
+                        <rect key="frame" x="0.0" y="294.5" width="320" height="34"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XW4-Fu-NrV">
                                 <rect key="frame" x="0.0" y="-0.5" width="320" height="34"/>
@@ -120,10 +120,11 @@
             <connections>
                 <outlet property="collectionView" destination="WlZ-ka-zkz" id="pft-ET-f67"/>
                 <outlet property="flagShipHeight" destination="E44-vg-WQB" id="UHm-R5-SRa"/>
+                <outlet property="nearlyMerchantView" destination="ILu-5a-0Ud" id="x9Y-nP-Ohi"/>
                 <outlet property="pageView" destination="o97-eS-blS" id="yH8-P2-b8z"/>
                 <outlet property="swipeView" destination="TBy-zS-edc" id="pgH-xi-Ua7"/>
             </connections>
-            <point key="canvasLocation" x="-368" y="-704.5"/>
+            <point key="canvasLocation" x="-673" y="-847"/>
         </tableViewCell>
     </objects>
     <resources>

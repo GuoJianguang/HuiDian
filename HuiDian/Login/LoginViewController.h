@@ -24,4 +24,11 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *logWidth;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *huidianWidth;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginvieHeight;
+
+
 @end

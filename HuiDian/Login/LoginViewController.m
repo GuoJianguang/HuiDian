@@ -32,6 +32,18 @@
         self.topHeight.constant = 25;
 
     }
+    
+    if (THeight == 480) {
+        self.logWidth.constant = TWitdh*(15/75.);
+        self.huidianWidth.constant = TWitdh*(8/75.);
+        self.loginvieHeight.constant = THeight*(60/1134.);
+    }else{
+        self.logWidth.constant = TWitdh*(22/75.);
+        self.huidianWidth.constant = TWitdh*(13/75.);
+        self.loginvieHeight.constant = THeight*(80/1134.);
+
+    }
+    
     self.loginBtn.layer.masksToBounds = YES;
     
     self.naviBar.delegate = self;

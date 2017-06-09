@@ -55,6 +55,15 @@
     if (TWitdh == 320) {
         self.left.constant = self.right.constant = 38;
     }
+    if (THeight == 480) {
+        self.viewTop.constant = 74;
+        self.copyrightHeight.constant = THeight*(70/1134.);
+        self.sureBtnHeight.constant = 30;
+        self.sureBtn.layer.cornerRadius = 15;
+    }else{
+        self.copyrightHeight.constant = THeight*(100/1134.);
+ 
+    }
 
 }
 

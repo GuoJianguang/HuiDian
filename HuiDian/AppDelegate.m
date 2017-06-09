@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import "HcdGuideView.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +23,25 @@
     [self SetTheThirdParty:launchOptions];
     [HDUserInfo shareUserInfos].token = @"";
     [[NSNotificationCenter defaultCenter]postNotificationName:AutoLoginAfterGetDeviceToken object:nil userInfo:nil];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self.window setRootViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Main"]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    NSMutableArray *images = [NSMutableArray new];
+    [images addObject:[UIImage imageNamed:@"guide1.jpg"]];
+    [images addObject:[UIImage imageNamed:@"guide2.jpg"]];
+    [images addObject:[UIImage imageNamed:@"guide3.jpg"]];
+    
+    HcdGuideView *guideView = [HcdGuideView sharedInstance];
+    guideView.window = self.window;
+    [guideView showGuideViewWithImages:images
+                        andButtonTitle:@"立即体验"
+                   andButtonTitleColor:[UIColor clearColor]
+                      andButtonBGColor:[UIColor clearColor]
+                  andButtonBorderColor:[UIColor clearColor]];
 
     return YES;
 }

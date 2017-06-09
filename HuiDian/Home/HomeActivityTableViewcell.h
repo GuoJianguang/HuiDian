@@ -47,7 +47,10 @@
 
 - (IBAction)moreTopLine:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIView *nearlyMerchantView;
 
+
+@property (nonatomic, strong)NSMutableArray *merchantArray;
 
 
 @end

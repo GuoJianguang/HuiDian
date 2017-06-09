@@ -53,9 +53,18 @@
     for (UIView *view in self.imageSuperView.subviews) {
         [view removeFromSuperview];
     }
+    if (_dataModel.morePic.count == 0) {
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, (THeight - THeight*(550/750.))/2., TWitdh, 30)];
+        lable.text = @"暂时没有详情图片";
+        [self.imageSuperView addSubview:lable];
+        lable.textAlignment = NSTextAlignmentCenter;
+//        lable.center = CGPointMake(self.imageSuperView.bounds.size.width/2.,(THeight - THeight*(550/750.))/2.);
+        lable.textColor = [UIColor colorFromHexString:@"#aaaaaa"] ;
+        return;
+    }
     for (ImageModel *imageModel in _dataModel.morePic) {
         UIImageView *imageView = [[UIImageView alloc]init];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:imageModel.image] placeholderImage:LoadingErrorDefaultImageBanner];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageModel.image] placeholderImage:nil];
         imageView.frame = CGRectMake(0, tempHeight, TWitdh, TWitdh*(imageModel.height/imageModel.width));
         [self.imageSuperView addSubview:imageView];
         tempHeight += TWitdh*(imageModel.height/imageModel.width);
@@ -79,7 +88,7 @@
         imageView.center = swipeView.center;
         imageView.tag = 10;
         [view addSubview:imageView];
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.contentMode = UIViewContentModeScaleToFill;
         view.autoresizingMask = UIViewAutoresizingFlexibleHeight |
         UIViewAutoresizingFlexibleWidth;
         imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth |

@@ -51,6 +51,9 @@
     self.swipeView.dataSource = self;
     self.swipeView.delegate = self;
     self.topLineLabel.textColor = MacoTitleColor;
+    
+    self.pageView.pageIndicatorTintColor = MacoYellowColor;
+    self.pageView.currentPageIndicatorTintColor = MacoTitleColor;
 }
 
 
@@ -67,7 +70,7 @@
 //        self.flagShipHeight.constant = TWitdh*(310/750.);
 //    }
     self.flagShipHeight.constant = TWitdh*(310/750.);
-    if (_flagShipArray.count == 2) {
+    if (_flagShipArray.count == 0) {
         UILabel *alerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, TWitdh - 16, TWitdh*(230/750.))];
         alerLabel.backgroundColor = [UIColor grayColor];
         alerLabel.text = @"暂无人气商家";
@@ -82,13 +85,12 @@
 }
 
 
-- (void)setDisCountArray:(NSMutableArray *)disCountArray
-{
+- (void)setActivityAarray:(NSMutableArray *)activityAarray{
     if (!_activityAarray) {
         _activityAarray = [NSMutableArray array];
     }
     [_activityAarray removeAllObjects];
-    [_activityAarray addObjectsFromArray:disCountArray];
+    [_activityAarray addObjectsFromArray:activityAarray];
     self.pageView.numberOfPages = _activityAarray.count;
     if (_activityAarray.count == 0 ) {
         ActivityModel *model = [[ActivityModel alloc]init];
@@ -99,7 +101,16 @@
     [self.swipeView reloadData];
 }
 
+- (void)setMerchantArray:(NSMutableArray *)merchantArray
+{
+    _merchantArray = merchantArray;
+    if (_merchantArray.count == 0) {
+        self.nearlyMerchantView.hidden = YES;
+    }else{
+        self.nearlyMerchantView.hidden = NO;
 
+    }
+}
 #pragma mark - 限时折扣
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
@@ -118,11 +129,12 @@
         imageView.center = swipeView.center;
         imageView.tag = 10;
         [view addSubview:imageView];
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
-//        view.autoresizingMask = UIViewAutoresizingFlexibleHeight |
-//        UIViewAutoresizingFlexibleWidth;
-//        imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth |
-//        UIViewAutoresizingFlexibleHeight;
+        imageView.contentMode = UIViewContentModeScaleToFill;
+        imageView.layer.masksToBounds = YES;
+        view.autoresizingMask = UIViewAutoresizingFlexibleHeight |
+        UIViewAutoresizingFlexibleWidth;
+        imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth |
+        UIViewAutoresizingFlexibleHeight;
         UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, 0, 0);
         [view addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -133,8 +145,6 @@
     }else {
         imageView = (UIImageView*)[view viewWithTag:10];
     }
-    view.backgroundColor = [UIColor redColor];
-
     ActivityModel *model = self.activityAarray[index];
     [imageView sd_setImageWithURL:[NSURL URLWithString:model.coverImg] placeholderImage:LoadingErrorDefaultImageBanner];
 
@@ -157,7 +167,7 @@
     }
     BaseHtmlViewController *htmlVC = [[BaseHtmlViewController alloc]init];
     htmlVC.htmlUrl = model.jumpValue;
-    htmlVC.htmlTitle = @"活动";
+    htmlVC.htmlTitle = model.name;
     [self.viewController.navigationController pushViewController:htmlVC animated:YES];
 }
 

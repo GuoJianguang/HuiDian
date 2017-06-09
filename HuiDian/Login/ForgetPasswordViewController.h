@@ -38,5 +38,8 @@
 - (IBAction)codeBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *right;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *left;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *copyrightHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sureBtnHeight;
 
 @end

@@ -45,5 +45,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *walletLabel;
 @property (weak, nonatomic) IBOutlet UILabel *setLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomheight;
 
 @end

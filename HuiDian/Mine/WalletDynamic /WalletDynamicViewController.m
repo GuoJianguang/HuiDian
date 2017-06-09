@@ -29,7 +29,7 @@
     self.isWhiteBg = YES;
     self.sortView.titleArray = @[@"订单记录",@"提现记录",@"每日收益"];
     self.sortView.delegate = self;
-    self.naviBar.lineVIew.hidden = YES;
+    self.naviBar.lineVIew.backgroundColor = MacoTitleColor;
     self.swipew.dataSource = self;
     self.swipew.delegate = self;
 }

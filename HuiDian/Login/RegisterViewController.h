@@ -22,9 +22,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *view3;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+@property (weak, nonatomic) IBOutlet UITextField *recommondPhoneTF;
 
 @property (weak, nonatomic) IBOutlet UIView *view4;
 @property (weak, nonatomic) IBOutlet UITextField *surePasswordTF;
+@property (weak, nonatomic) IBOutlet UIView *view6;
 
 @property (weak, nonatomic) IBOutlet UIView *view5;
 @property (weak, nonatomic) IBOutlet UIButton *sureBtn;
@@ -40,5 +42,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rgiht;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *left;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sureBtnHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *copyrightHeight;
 
 @end
