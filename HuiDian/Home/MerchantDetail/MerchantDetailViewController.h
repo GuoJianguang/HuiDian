@@ -11,5 +11,5 @@
 @interface MerchantDetailViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSString *merchantCode;
-
+@property (nonatomic, copy)NSString *name;
 @end

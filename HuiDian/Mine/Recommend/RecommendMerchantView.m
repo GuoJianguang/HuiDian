@@ -49,7 +49,8 @@
 - (void)request:(BOOL )isHeader
 {
     NSDictionary *prams = @{
-                            @"token":[HDUserInfo shareUserInfos].token};
+                            @"token":[HDUserInfo shareUserInfos].token
+                            };
     [HttpClient POST:@"user/recommendProfit/mch/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
@@ -67,7 +68,6 @@
             [self.tableView.mj_header endRefreshing];
         }else{
             [self.tableView.mj_footer endRefreshing];
-            
         }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         [self.tableView showNoDataSouceNoNetworkConnection];

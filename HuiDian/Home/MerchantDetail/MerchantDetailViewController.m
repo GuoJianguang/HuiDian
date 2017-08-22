@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.naviBar.hidden = YES;
+//    self.naviBar.hidden = YES;
+    self.naviBar.title = self.name;
     [self detailRequest:self.merchantCode];
     self.isWhiteBg = YES;
 }

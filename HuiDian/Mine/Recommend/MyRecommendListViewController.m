@@ -11,11 +11,9 @@
 #import "MyRecommendDetailListViewController.h"
 
 @interface MyRecommendListViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 @property (nonatomic, strong)NSMutableArray *dataSouceArray;
 @property (nonatomic, assign)NSInteger page;//页数
-
-
-
 
 @end
 
@@ -39,8 +37,6 @@
     [self.tableView.mj_header beginRefreshing];
     [self.tableView noDataSouce];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -79,7 +75,6 @@
             
             [self.tableView reloadData];
         }
-        
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         if (isHeader) {
             [self.tableView.mj_header endRefreshing];
@@ -89,6 +84,7 @@
         [self.tableView showNoDataSouceNoNetworkConnection];
     }];
 }
+
 #pragma mark - UITableview
 
 

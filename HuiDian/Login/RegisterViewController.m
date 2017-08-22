@@ -170,6 +170,7 @@
             return ;
         }
         [[JAlertViewHelper shareAlterHelper]showTint:@"请输入正确的手机号" duration:1.5];
+        sender.enabled = YES;
     }];
     
     

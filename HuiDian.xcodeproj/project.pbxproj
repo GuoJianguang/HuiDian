@@ -827,6 +827,7 @@
 			isa = PBXGroup;
 			children = (
 				045B01021EB9C69F00107CC2 /* HuiDian */,
+				045B01031EB9C69F00107CC2 /* Supporting Files */,
 				045B011F1EB9C6A000107CC2 /* HuiDianTests */,
 				045B012A1EB9C6A000107CC2 /* HuiDianUITests */,
 				045B01011EB9C69F00107CC2 /* Products */,
@@ -865,7 +866,6 @@
 				04614A3F1EC1AD680056951B /* Mine */,
 				04AD5C1B1EBB087700BD83D1 /* Login */,
 				04AD5CC31EBB0B9D00BD83D1 /* ThirdAPI */,
-				045B01031EB9C69F00107CC2 /* Supporting Files */,
 				04AD5C5D1EBB0B3500BD83D1 /* Base */,
 				04AD5C1E1EBB0A1C00BD83D1 /* Public */,
 			);
@@ -878,6 +878,7 @@
 				045B01041EB9C69F00107CC2 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = HuiDian;
 			sourceTree = "<group>";
 		};
 		045B011F1EB9C6A000107CC2 /* HuiDianTests */ = {
@@ -1020,14 +1021,14 @@
 				048ECE151ECA9CE0001878A4 /* MerchantDetailTableViewCell.h */,
 				048ECE161ECA9CE0001878A4 /* MerchantDetailTableViewCell.m */,
 				048ECE171ECA9CE0001878A4 /* MerchantDetailTableViewCell.xib */,
-				048ECE1A1ECA9EAA001878A4 /* BussessDetailModel.h */,
-				048ECE1B1ECA9EAA001878A4 /* BussessDetailModel.m */,
 				048ECF091ECACD43001878A4 /* MerchantSearchViewController.h */,
 				048ECF0A1ECACD43001878A4 /* MerchantSearchViewController.m */,
 				048ECF0B1ECACD43001878A4 /* MerchantSearchViewController.xib */,
 				048ECF0E1ECACDA4001878A4 /* MerchantSearchResultViewController.h */,
 				048ECF0F1ECACDA4001878A4 /* MerchantSearchResultViewController.m */,
 				048ECF101ECACDA4001878A4 /* MerchantSearchResultViewController.xib */,
+				048ECE1A1ECA9EAA001878A4 /* BussessDetailModel.h */,
+				048ECE1B1ECA9EAA001878A4 /* BussessDetailModel.m */,
 			);
 			path = MerchantDetail;
 			sourceTree = "<group>";

@@ -154,6 +154,7 @@
         {
             MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
             merchantDVC.merchantCode = model.jumpValue;
+            merchantDVC.name = model.name;
             [self.viewController.navigationController pushViewController:merchantDVC animated:YES];
             
         }

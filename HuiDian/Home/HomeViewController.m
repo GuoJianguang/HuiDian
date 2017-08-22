@@ -228,6 +228,7 @@
     MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
     MerchantDataModel *model = self.dataSouceArray[indexPath.row -3];
     merchantDVC.merchantCode = model.code;
+    merchantDVC.name = model.name;
     [self.navigationController pushViewController:merchantDVC animated:YES];
 }
 #pragma mark - 活动接口
@@ -320,7 +321,6 @@
     }];
 }
 
-
 #pragma mark - 选取定位
 
 - (IBAction)cityBtn:(UIButton *)sender
@@ -334,7 +334,6 @@
     cityListView.arrayHistoricalCity = historicalCity;
     //定位城市列表
     cityListView.arrayLocatingCity   = [NSMutableArray arrayWithObjects:self.locationCity,nil];
-    
     [self presentViewController:cityListView animated:YES completion:nil];
 }
 

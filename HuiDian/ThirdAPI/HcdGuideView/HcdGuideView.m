@@ -69,8 +69,9 @@
 - (UIPageControl *)pageControl {
     if (_pageControl == nil) {
         _pageControl = [[UIPageControl alloc] init];
+        _pageControl.enabled = NO;
         _pageControl.frame = CGRectMake(0, 0, kHcdGuideViewBounds.size.width, 44.0f);
-        _pageControl.center = CGPointMake(kHcdGuideViewBounds.size.width / 2, kHcdGuideViewBounds.size.height - 60);
+        _pageControl.center = CGPointMake(kHcdGuideViewBounds.size.width / 2, kHcdGuideViewBounds.size.height - 60.);
     }
     return _pageControl;
 }

@@ -26,7 +26,6 @@
     model.zone = NullToSpace(dic[@"zone"]);
     model.createTime = NullToSpace(dic[@"createTime"]);
     model.modifyTime = NullToSpace(dic[@"modifyTime"]);
-    
     return model;
 }
 

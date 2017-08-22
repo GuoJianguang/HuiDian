@@ -141,6 +141,7 @@
     MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
     MerchantDataModel *model = self.dataSouceArray[indexPath.row];
     merchantDVC.merchantCode = model.code;
+    merchantDVC.name = model.name;
     [self.navigationController pushViewController:merchantDVC animated:YES];
 }
 

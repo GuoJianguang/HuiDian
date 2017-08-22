@@ -90,8 +90,6 @@
             [SVProgressHUD dismiss];
         }];
     }
-
-    
 }
 #pragma mark - 获取登录模块
 + (UINavigationController *)controller

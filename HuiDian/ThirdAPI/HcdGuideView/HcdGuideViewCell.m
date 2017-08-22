@@ -49,7 +49,7 @@
     
     [self.contentView addSubview:self.imageView];
     [self.contentView addSubview:self.button];
-    
+    [self.contentView bringSubviewToFront:self.button];
 //    [self.button setCenter:CGPointMake(kHcdGuideViewBounds.size.width / 2, kHcdGuideViewBounds.size.height - 80)];
 }
 

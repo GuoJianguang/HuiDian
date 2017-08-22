@@ -70,7 +70,6 @@
         self.shiStr = self.addressModel.city;
         self.quStr = self.addressModel.zone;
     }
-
 }
 
 - (void)detailBtnClick

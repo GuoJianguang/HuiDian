@@ -49,7 +49,7 @@
 {
     NSDictionary *prams = @{
                             @"token":[HDUserInfo shareUserInfos].token};
-    [HttpClient POST:@"user/recommendProfit/user/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
+    [HttpClient POST:@"user/ecrommendProfit/user/get" parameters:prams success:^(NSURLSessionDataTask *operation, id jsonObject) {
         if (IsRequestTrue) {
             if (isHeader) {
                 [self.dataSouceArray removeAllObjects];

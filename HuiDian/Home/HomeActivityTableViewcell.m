@@ -210,6 +210,7 @@
     MerchantDetailViewController *merchantDVC = [[MerchantDetailViewController alloc]init];
     FlagShipDataModel *model = self.flagShipArray[indexPath.item];
     merchantDVC.merchantCode = model.mchCode;
+    merchantDVC.name = model.mchName;
     [self.viewController.navigationController pushViewController:merchantDVC animated:YES];
 }
 
